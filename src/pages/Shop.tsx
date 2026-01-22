@@ -17,7 +17,7 @@ export const Shop = () => {
   const [selectedSizes, setSelectedSizes] = useState<string[]>([]);
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 500]);
   const [sortBy, setSortBy] = useState<SortOption>('popular');
-  const [gridCols, setGridCols] = useState<3 | 4>(4);
+  const [gridCols, setGridCols] = useState<3 | 4>(3);
 
   const allSizes = ['0-3 luni', '3-6 luni', '6-9 luni', '9-12 luni', '12-18 luni', '18-24 luni', '1-2 ani', '2-3 ani', '3-4 ani', '4-5 ani', '5-6 ani', '6-7 ani', '7-8 ani'];
   const subcategories = ['rochite', 'bluze', 'pantaloni', 'seturi', 'accesorii'];
@@ -188,14 +188,14 @@ export const Shop = () => {
           </div>
         </div>
 
-        <div className="flex gap-8 lg:gap-12">
+        <div className="flex gap-10 lg:gap-16">
           {/* Sidebar Filters (Desktop) */}
           <aside className="hidden lg:block w-64 xl:w-72 flex-shrink-0">
             <div className="sticky top-28 space-y-8">
               {/* Subcategories */}
               <div className="bg-white p-6 rounded-2xl shadow-card">
                 <h3 className="font-heading font-bold text-base mb-5">Categorie</h3>
-                <div className="space-y-3">
+                <div className="space-y-4">
                   {subcategories.map((sub) => (
                     <button
                       key={sub}
@@ -284,7 +284,7 @@ export const Shop = () => {
             ) : (
               <motion.div
                 layout
-                className={`grid grid-cols-2 gap-8 md:gap-12 ${
+                className={`grid grid-cols-2 gap-10 md:gap-14 ${
                   gridCols === 3 ? 'lg:grid-cols-3' : 'lg:grid-cols-3 xl:grid-cols-4'
                 }`}
               >
@@ -329,7 +329,7 @@ export const Shop = () => {
                   {/* Subcategories */}
                   <div>
                     <h3 className="font-heading font-bold text-base mb-5">Categorie</h3>
-                    <div className="space-y-3">
+                  <div className="space-y-4">
                       {subcategories.map((sub) => (
                         <button
                           key={sub}

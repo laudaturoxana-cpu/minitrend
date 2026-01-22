@@ -35,7 +35,7 @@ export const Home = () => {
   return (
     <div className="w-full overflow-x-hidden space-y-20 md:space-y-24 lg:space-y-28">
       {/* Hero Section */}
-      <section className="relative min-h-[600px] lg:min-h-[calc(100vh-80px)] flex items-center py-12 md:py-16 lg:py-0">
+      <section className="relative min-h-[600px] lg:min-h-[calc(100vh-80px)] flex items-center py-20 md:py-24 lg:py-28">
         {/* Background */}
         <div className="absolute inset-0 gradient-hero" />
 
@@ -173,12 +173,12 @@ export const Home = () => {
       {/* Features Strip */}
       <section className="py-20 md:py-28 lg:py-32 bg-gradient-to-b from-white to-cream">
         <div className="container px-5 md:px-6">
-          <div className="text-center mb-12 md:mb-16">
+          <div className="text-center mb-16 md:mb-20">
             <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-text-primary">
               De Ce Să Alegi MiniTrend?
             </h2>
           </div>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 lg:gap-14">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 md:gap-14 lg:gap-16">
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
@@ -210,7 +210,7 @@ export const Home = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-12 md:mb-16 lg:mb-20"
+            className="text-center mb-16 md:mb-20 lg:mb-24"
           >
             <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary font-semibold text-xs uppercase tracking-wider mb-5">
               <Sparkles size={14} />
@@ -224,7 +224,7 @@ export const Home = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8 md:gap-12 lg:gap-14">
+          <div className="grid md:grid-cols-3 gap-10 md:gap-14 lg:gap-16">
             {categories.map((category, index) => (
               <motion.div
                 key={category.id}
@@ -269,7 +269,7 @@ export const Home = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-12 md:mb-16"
+            className="flex flex-col sm:flex-row sm:items-end justify-between gap-8 mb-16 md:mb-20"
           >
             <div>
               <span className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/10 rounded-full text-secondary font-semibold text-xs uppercase tracking-wider mb-5">
@@ -288,7 +288,7 @@ export const Home = () => {
             </Link>
           </motion.div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 md:gap-14">
             {newProducts.map((product, index) => (
               <ProductCard key={product.id} product={product} index={index} />
             ))}
@@ -342,7 +342,7 @@ export const Home = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-12 md:mb-16"
+            className="text-center mb-16 md:mb-20"
           >
             <span className="inline-flex items-center gap-2 px-4 py-2 bg-warning/10 rounded-full text-warning font-semibold text-xs uppercase tracking-wider mb-5">
               <Star size={14} className="fill-warning" />
@@ -356,7 +356,7 @@ export const Home = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 md:gap-14">
             {popularProducts.map((product, index) => (
               <ProductCard key={product.id} product={product} index={index} />
             ))}
@@ -443,7 +443,7 @@ export const Home = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-12 md:mb-16"
+            className="text-center mb-16 md:mb-20"
           >
             <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary font-semibold text-xs uppercase tracking-wider mb-5">
               <Heart size={14} />
@@ -457,7 +457,7 @@ export const Home = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+          <div className="grid md:grid-cols-3 gap-10 md:gap-14">
             {[
               {
                 name: 'Maria P.',
