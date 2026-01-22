@@ -94,9 +94,9 @@ export const Shop = () => {
   const hasActiveFilters = selectedSubcategory || selectedSizes.length > 0 || priceRange[0] > 0 || priceRange[1] < 500;
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden">
       {/* Hero Banner */}
-      <section className="relative h-[300px] overflow-hidden">
+      <section className="relative h-[200px] md:h-[250px] lg:h-[300px] overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -106,12 +106,12 @@ export const Shop = () => {
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/30" />
-        <div className="container h-full flex items-center relative z-10">
+        <div className="container h-full flex items-center relative z-10 px-5 md:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            <h1 className="font-heading text-4xl md:text-5xl font-bold text-white mb-4">
+            <h1 className="font-heading text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-2 md:mb-4">
               {filter === 'new'
                 ? 'Noutăți'
                 : filter === 'sale'
@@ -120,44 +120,44 @@ export const Shop = () => {
                 ? categoryInfo.name
                 : 'Toate Produsele'}
             </h1>
-            <p className="text-white/80 max-w-xl">
+            <p className="text-white/80 text-sm md:text-base lg:text-lg max-w-xl">
               {categoryInfo?.description || 'Descoperă întreaga noastră colecție de hăinuțe pentru copii'}
             </p>
           </motion.div>
         </div>
       </section>
 
-      <div className="container py-16 lg:py-20">
+      <div className="container py-8 md:py-12 lg:py-16 px-5 md:px-6">
         {/* Toolbar */}
-        <div className="flex flex-wrap items-center justify-between gap-6 mb-14">
-          <div className="flex items-center gap-5">
+        <div className="flex flex-wrap items-center justify-between gap-4 mb-8 md:mb-10">
+          <div className="flex items-center gap-3">
             {/* Filter Toggle (Mobile) */}
             <button
               onClick={() => setFilterOpen(true)}
-              className="lg:hidden flex items-center gap-3 px-6 py-3.5 bg-white rounded-2xl shadow-card hover:shadow-hover transition-all"
+              className="lg:hidden flex items-center gap-2 px-4 py-2.5 bg-white rounded-xl shadow-card text-sm"
             >
-              <SlidersHorizontal size={20} />
+              <SlidersHorizontal size={18} />
               <span className="font-medium">Filtre</span>
               {hasActiveFilters && (
-                <span className="w-6 h-6 bg-primary text-white text-xs rounded-full flex items-center justify-center font-bold">
+                <span className="w-5 h-5 bg-primary text-white text-xs rounded-full flex items-center justify-center font-bold">
                   !
                 </span>
               )}
             </button>
 
             {/* Results Count */}
-            <p className="text-text-secondary text-lg">
+            <p className="text-text-secondary text-sm md:text-base">
               <span className="font-bold text-text-primary">{filteredProducts.length}</span> produse
             </p>
           </div>
 
-          <div className="flex items-center gap-5">
+          <div className="flex items-center gap-3">
             {/* Sort */}
             <div className="relative">
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value as SortOption)}
-                className="appearance-none px-6 py-3.5 pr-12 bg-white rounded-2xl shadow-card cursor-pointer outline-none focus:ring-2 focus:ring-primary text-base font-medium"
+                className="appearance-none px-4 py-2.5 pr-10 bg-white rounded-xl shadow-card cursor-pointer outline-none focus:ring-2 focus:ring-primary text-sm font-medium"
               >
                 <option value="popular">Cele mai populare</option>
                 <option value="newest">Cele mai noi</option>
@@ -165,45 +165,45 @@ export const Shop = () => {
                 <option value="price-desc">Preț: Mare - Mic</option>
               </select>
               <ChevronDown
-                size={20}
-                className="absolute right-4 top-1/2 -translate-y-1/2 text-text-light pointer-events-none"
+                size={18}
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-text-light pointer-events-none"
               />
             </div>
 
             {/* Grid Toggle */}
-            <div className="hidden md:flex items-center gap-2 bg-white rounded-2xl shadow-card p-2">
+            <div className="hidden md:flex items-center gap-1 bg-white rounded-xl shadow-card p-1.5">
               <button
                 onClick={() => setGridCols(3)}
-                className={`p-3 rounded-xl transition-all ${gridCols === 3 ? 'bg-primary text-white shadow-md' : 'text-text-light hover:text-primary'}`}
+                className={`p-2 rounded-lg transition-all ${gridCols === 3 ? 'bg-primary text-white' : 'text-text-light hover:text-primary'}`}
               >
-                <LayoutGrid size={20} />
+                <LayoutGrid size={18} />
               </button>
               <button
                 onClick={() => setGridCols(4)}
-                className={`p-3 rounded-xl transition-all ${gridCols === 4 ? 'bg-primary text-white shadow-md' : 'text-text-light hover:text-primary'}`}
+                className={`p-2 rounded-lg transition-all ${gridCols === 4 ? 'bg-primary text-white' : 'text-text-light hover:text-primary'}`}
               >
-                <Grid3X3 size={20} />
+                <Grid3X3 size={18} />
               </button>
             </div>
           </div>
         </div>
 
-        <div className="flex gap-12 lg:gap-16">
+        <div className="flex gap-6 lg:gap-10">
           {/* Sidebar Filters (Desktop) */}
-          <aside className="hidden lg:block w-80 flex-shrink-0">
-            <div className="sticky top-32 space-y-10">
+          <aside className="hidden lg:block w-64 xl:w-72 flex-shrink-0">
+            <div className="sticky top-28 space-y-6">
               {/* Subcategories */}
-              <div className="bg-white p-8 rounded-3xl shadow-card">
-                <h3 className="font-heading font-bold text-xl mb-8">Categorie</h3>
-                <div className="space-y-4">
+              <div className="bg-white p-5 rounded-2xl shadow-card">
+                <h3 className="font-heading font-bold text-base mb-4">Categorie</h3>
+                <div className="space-y-2">
                   {subcategories.map((sub) => (
                     <button
                       key={sub}
                       onClick={() => setSelectedSubcategory(selectedSubcategory === sub ? null : sub)}
                       className={`
-                        w-full text-left px-5 py-4 rounded-2xl transition-all text-base
+                        w-full text-left px-4 py-2.5 rounded-xl transition-all text-sm
                         ${selectedSubcategory === sub
-                          ? 'bg-primary text-white font-semibold shadow-lg'
+                          ? 'bg-primary text-white font-medium'
                           : 'hover:bg-primary/10 text-text-secondary hover:text-primary'
                         }
                       `}
@@ -215,36 +215,36 @@ export const Shop = () => {
               </div>
 
               {/* Price Range */}
-              <div className="bg-white p-8 rounded-3xl shadow-card">
-                <h3 className="font-heading font-bold text-xl mb-8">Preț</h3>
-                <div className="space-y-6">
+              <div className="bg-white p-5 rounded-2xl shadow-card">
+                <h3 className="font-heading font-bold text-base mb-4">Preț</h3>
+                <div className="space-y-4">
                   <input
                     type="range"
                     min="0"
                     max="500"
                     value={priceRange[1]}
                     onChange={(e) => setPriceRange([priceRange[0], parseInt(e.target.value)])}
-                    className="w-full accent-primary h-3 cursor-pointer"
+                    className="w-full accent-primary h-2 cursor-pointer"
                   />
-                  <div className="flex items-center justify-between text-base">
-                    <span className="px-5 py-3 bg-gray-100 rounded-xl font-semibold">{priceRange[0]} Lei</span>
-                    <span className="px-5 py-3 bg-gray-100 rounded-xl font-semibold">{priceRange[1]} Lei</span>
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="px-3 py-2 bg-gray-100 rounded-lg font-medium">{priceRange[0]} Lei</span>
+                    <span className="px-3 py-2 bg-gray-100 rounded-lg font-medium">{priceRange[1]} Lei</span>
                   </div>
                 </div>
               </div>
 
               {/* Sizes */}
-              <div className="bg-white p-8 rounded-3xl shadow-card">
-                <h3 className="font-heading font-bold text-xl mb-8">Mărime</h3>
-                <div className="flex flex-wrap gap-3">
+              <div className="bg-white p-5 rounded-2xl shadow-card">
+                <h3 className="font-heading font-bold text-base mb-4">Mărime</h3>
+                <div className="flex flex-wrap gap-2">
                   {allSizes.map((size) => (
                     <button
                       key={size}
                       onClick={() => toggleSize(size)}
                       className={`
-                        px-4 py-3 text-sm rounded-xl border-2 transition-all
+                        px-3 py-2 text-xs rounded-lg border-2 transition-all
                         ${selectedSizes.includes(size)
-                          ? 'bg-primary text-white border-primary font-semibold shadow-md'
+                          ? 'bg-primary text-white border-primary font-medium'
                           : 'border-gray-200 hover:border-primary text-text-secondary hover:text-primary'
                         }
                       `}
@@ -259,7 +259,7 @@ export const Shop = () => {
               {hasActiveFilters && (
                 <button
                   onClick={clearFilters}
-                  className="w-full py-5 text-primary font-bold hover:bg-primary/10 rounded-2xl transition-colors text-base"
+                  className="w-full py-3 text-primary font-bold hover:bg-primary/10 rounded-xl transition-colors text-sm"
                 >
                   Resetează Filtrele
                 </button>
@@ -268,10 +268,10 @@ export const Shop = () => {
           </aside>
 
           {/* Products Grid */}
-          <div className="flex-1">
+          <div className="flex-1 min-w-0">
             {filteredProducts.length === 0 ? (
-              <div className="text-center py-20">
-                <p className="text-text-secondary text-lg mb-4">
+              <div className="text-center py-16">
+                <p className="text-text-secondary text-base mb-4">
                   Nu am găsit produse cu filtrele selectate
                 </p>
                 <button
@@ -284,8 +284,8 @@ export const Shop = () => {
             ) : (
               <motion.div
                 layout
-                className={`grid grid-cols-2 gap-6 md:gap-8 lg:gap-10 ${
-                  gridCols === 3 ? 'lg:grid-cols-3' : 'lg:grid-cols-4'
+                className={`grid grid-cols-2 gap-4 md:gap-5 ${
+                  gridCols === 3 ? 'lg:grid-cols-3' : 'lg:grid-cols-3 xl:grid-cols-4'
                 }`}
               >
                 <AnimatePresence mode="popLayout">
@@ -314,28 +314,28 @@ export const Shop = () => {
               animate={{ x: 0 }}
               exit={{ x: '-100%' }}
               transition={{ type: 'spring', damping: 25 }}
-              className="absolute left-0 top-0 bottom-0 w-[320px] bg-cream overflow-y-auto"
+              className="absolute left-0 top-0 bottom-0 w-[280px] bg-cream overflow-y-auto"
             >
-              <div className="p-8">
-                <div className="flex items-center justify-between mb-8">
-                  <h2 className="font-heading text-2xl font-bold">Filtre</h2>
-                  <button onClick={() => setFilterOpen(false)} className="p-2.5 hover:bg-gray-100 rounded-full">
-                    <X size={24} />
+              <div className="p-5">
+                <div className="flex items-center justify-between mb-6">
+                  <h2 className="font-heading text-xl font-bold">Filtre</h2>
+                  <button onClick={() => setFilterOpen(false)} className="p-2 hover:bg-gray-100 rounded-full">
+                    <X size={22} />
                   </button>
                 </div>
 
-                {/* Same filter content as sidebar */}
-                <div className="space-y-8">
+                {/* Filter content */}
+                <div className="space-y-6">
                   {/* Subcategories */}
                   <div>
-                    <h3 className="font-heading font-bold text-lg mb-5">Categorie</h3>
-                    <div className="space-y-3">
+                    <h3 className="font-heading font-bold text-base mb-4">Categorie</h3>
+                    <div className="space-y-2">
                       {subcategories.map((sub) => (
                         <button
                           key={sub}
                           onClick={() => setSelectedSubcategory(selectedSubcategory === sub ? null : sub)}
                           className={`
-                            w-full text-left px-4 py-3 rounded-xl transition-colors text-[15px]
+                            w-full text-left px-4 py-2.5 rounded-xl transition-colors text-sm
                             ${selectedSubcategory === sub
                               ? 'bg-primary text-white font-medium'
                               : 'hover:bg-primary/10 text-text-secondary'
@@ -350,7 +350,7 @@ export const Shop = () => {
 
                   {/* Price Range */}
                   <div>
-                    <h3 className="font-heading font-bold text-lg mb-5">Preț</h3>
+                    <h3 className="font-heading font-bold text-base mb-4">Preț</h3>
                     <input
                       type="range"
                       min="0"
@@ -359,22 +359,22 @@ export const Shop = () => {
                       onChange={(e) => setPriceRange([priceRange[0], parseInt(e.target.value)])}
                       className="w-full accent-primary h-2"
                     />
-                    <div className="flex items-center justify-between text-[15px] mt-4">
-                      <span className="px-4 py-2 bg-gray-100 rounded-lg font-medium">{priceRange[0]} Lei</span>
-                      <span className="px-4 py-2 bg-gray-100 rounded-lg font-medium">{priceRange[1]} Lei</span>
+                    <div className="flex items-center justify-between text-sm mt-3">
+                      <span className="px-3 py-2 bg-gray-100 rounded-lg font-medium">{priceRange[0]} Lei</span>
+                      <span className="px-3 py-2 bg-gray-100 rounded-lg font-medium">{priceRange[1]} Lei</span>
                     </div>
                   </div>
 
                   {/* Sizes */}
                   <div>
-                    <h3 className="font-heading font-bold text-lg mb-5">Mărime</h3>
-                    <div className="flex flex-wrap gap-2.5">
+                    <h3 className="font-heading font-bold text-base mb-4">Mărime</h3>
+                    <div className="flex flex-wrap gap-2">
                       {allSizes.map((size) => (
                         <button
                           key={size}
                           onClick={() => toggleSize(size)}
                           className={`
-                            px-3.5 py-2 text-sm rounded-lg border-2 transition-colors
+                            px-3 py-2 text-xs rounded-lg border-2 transition-colors
                             ${selectedSizes.includes(size)
                               ? 'bg-primary text-white border-primary font-medium'
                               : 'border-gray-200 hover:border-primary text-text-secondary'
@@ -389,17 +389,17 @@ export const Shop = () => {
                 </div>
 
                 {/* Actions */}
-                <div className="mt-10 space-y-4">
+                <div className="mt-8 space-y-3">
                   <button
                     onClick={() => setFilterOpen(false)}
-                    className="w-full py-4 bg-primary text-white font-semibold rounded-xl text-base"
+                    className="w-full py-3 bg-primary text-white font-semibold rounded-xl text-sm"
                   >
                     Vezi {filteredProducts.length} Produse
                   </button>
                   {hasActiveFilters && (
                     <button
                       onClick={clearFilters}
-                      className="w-full py-4 text-primary font-semibold text-[15px]"
+                      className="w-full py-3 text-primary font-semibold text-sm"
                     >
                       Resetează Filtrele
                     </button>

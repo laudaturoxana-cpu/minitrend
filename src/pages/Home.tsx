@@ -11,101 +11,99 @@ export const Home = () => {
 
   const features = [
     {
-      icon: <Truck size={28} />,
+      icon: <Truck size={24} />,
       title: 'Livrare Gratuită',
       description: 'La comenzi peste 200 Lei',
     },
     {
-      icon: <Shield size={28} />,
+      icon: <Shield size={24} />,
       title: 'Plăți Sigure',
       description: 'Criptare SSL 100%',
     },
     {
-      icon: <RefreshCw size={28} />,
+      icon: <RefreshCw size={24} />,
       title: 'Retururi Ușoare',
       description: '30 de zile pentru retur',
     },
     {
-      icon: <Heart size={28} />,
+      icon: <Heart size={24} />,
       title: 'Calitate Premium',
       description: 'Materiale certificate',
     },
   ];
 
   return (
-    <div className="w-full">
+    <div className="w-full overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative min-h-[calc(100vh-80px)] flex items-center py-16 lg:py-0">
+      <section className="relative min-h-[600px] lg:min-h-[calc(100vh-80px)] flex items-center py-12 md:py-16 lg:py-0">
         {/* Background */}
         <div className="absolute inset-0 gradient-hero" />
 
-        {/* Decorative blobs */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-[10%] left-[5%] w-[300px] h-[300px] bg-secondary/10 rounded-full blur-3xl" />
-          <div className="absolute top-[20%] right-[10%] w-[400px] h-[400px] bg-primary/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-[10%] left-[30%] w-[350px] h-[350px] bg-accent-blue/10 rounded-full blur-3xl" />
+        {/* Decorative blobs - hidden on mobile */}
+        <div className="hidden md:block absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-[10%] left-[5%] w-[200px] lg:w-[300px] h-[200px] lg:h-[300px] bg-secondary/10 rounded-full blur-3xl" />
+          <div className="absolute top-[20%] right-[10%] w-[250px] lg:w-[400px] h-[250px] lg:h-[400px] bg-primary/10 rounded-full blur-3xl" />
         </div>
 
-        <div className="container relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="container relative z-10 px-5 md:px-6">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             {/* Text Content */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="order-2 lg:order-1"
+              className="order-2 lg:order-1 text-center lg:text-left"
             >
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/80 backdrop-blur-sm rounded-full text-primary font-semibold text-sm mb-8 shadow-soft"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full text-primary font-semibold text-xs md:text-sm mb-6"
               >
-                <Sparkles size={18} />
+                <Sparkles size={16} />
                 <span>Colecția Primăvară 2026</span>
               </motion.div>
 
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-text-primary mb-8">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-text-primary mb-6 leading-tight">
                 Hăinuțe{' '}
                 <span className="text-gradient">Adorabile</span>
                 <br />
                 pentru Prichindei
               </h1>
 
-              <p className="text-lg lg:text-xl text-text-secondary mb-10 max-w-xl">
+              <p className="text-base md:text-lg text-text-secondary mb-8 max-w-xl mx-auto lg:mx-0">
                 Descoperă colecția noastră de haine pentru copii – rochițe de vis,
-                tricouri cool și pantaloni confortabili. Calitate premium pentru
-                fiecare aventură!
+                tricouri cool și pantaloni confortabili.
               </p>
 
-              <div className="flex flex-wrap gap-4 mb-12">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-10">
                 <Link to="/shop">
-                  <Button size="lg" icon={<ArrowRight size={20} />} iconPosition="right">
+                  <Button size="lg" icon={<ArrowRight size={18} />} iconPosition="right" className="w-full sm:w-auto">
                     Descoperă Colecția
                   </Button>
                 </Link>
                 <Link to="/shop?filter=sale">
-                  <Button variant="outline" size="lg">
+                  <Button variant="outline" size="lg" className="w-full sm:w-auto">
                     Vezi Reducerile
                   </Button>
                 </Link>
               </div>
 
               {/* Stats */}
-              <div className="flex flex-wrap gap-10 lg:gap-14">
-                <div>
-                  <p className="text-3xl lg:text-4xl font-bold text-primary mb-1">500+</p>
-                  <p className="text-text-secondary">Produse</p>
+              <div className="flex flex-wrap justify-center lg:justify-start gap-6 md:gap-10">
+                <div className="text-center lg:text-left">
+                  <p className="text-2xl md:text-3xl font-bold text-primary">500+</p>
+                  <p className="text-text-secondary text-sm">Produse</p>
                 </div>
-                <div>
-                  <p className="text-3xl lg:text-4xl font-bold text-primary mb-1">10k+</p>
-                  <p className="text-text-secondary">Clienți Fericiți</p>
+                <div className="text-center lg:text-left">
+                  <p className="text-2xl md:text-3xl font-bold text-primary">10k+</p>
+                  <p className="text-text-secondary text-sm">Clienți Fericiți</p>
                 </div>
-                <div className="flex items-start gap-2">
-                  <Star size={28} className="text-warning fill-warning mt-1" />
-                  <div>
-                    <p className="text-3xl lg:text-4xl font-bold text-primary mb-1">4.9</p>
-                    <p className="text-text-secondary">Rating</p>
+                <div className="flex items-center gap-2">
+                  <Star size={24} className="text-warning fill-warning" />
+                  <div className="text-center lg:text-left">
+                    <p className="text-2xl md:text-3xl font-bold text-primary">4.9</p>
+                    <p className="text-text-secondary text-sm">Rating</p>
                   </div>
                 </div>
               </div>
@@ -118,9 +116,9 @@ export const Home = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="relative order-1 lg:order-2"
             >
-              <div className="relative max-w-[480px] mx-auto lg:max-w-none">
+              <div className="relative max-w-[350px] md:max-w-[420px] mx-auto lg:max-w-none">
                 {/* Main Image */}
-                <div className="relative z-10 rounded-[32px] overflow-hidden shadow-2xl">
+                <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl">
                   <img
                     src="https://images.unsplash.com/photo-1503919545889-aef636e10ad4?w=800&q=80"
                     alt="Copii fericiți"
@@ -128,40 +126,39 @@ export const Home = () => {
                   />
                 </div>
 
-                {/* Floating Card - Top Right */}
+                {/* Floating Card - Top Right - hidden on small mobile */}
                 <motion.div
-                  animate={{ y: [0, -12, 0] }}
+                  animate={{ y: [0, -10, 0] }}
                   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute top-4 -right-2 sm:top-8 sm:-right-6 bg-white rounded-2xl shadow-card p-4 lg:p-5 z-20"
+                  className="hidden sm:block absolute top-4 -right-2 md:top-6 md:-right-4 bg-white rounded-xl shadow-lg p-3 md:p-4 z-20"
                 >
-                  <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 lg:w-14 lg:h-14 bg-success/10 rounded-xl flex items-center justify-center">
-                      <Truck className="text-success" size={24} />
+                  <div className="flex items-center gap-2">
+                    <div className="w-10 h-10 bg-success/10 rounded-lg flex items-center justify-center">
+                      <Truck className="text-success" size={20} />
                     </div>
                     <div>
-                      <p className="font-semibold text-sm lg:text-base text-text-primary">Livrare Rapidă</p>
-                      <p className="text-xs lg:text-sm text-text-light">24-48 ore</p>
+                      <p className="font-semibold text-sm text-text-primary">Livrare Rapidă</p>
+                      <p className="text-xs text-text-light">24-48 ore</p>
                     </div>
                   </div>
                 </motion.div>
 
-                {/* Floating Card - Bottom Left */}
+                {/* Floating Card - Bottom Left - hidden on small mobile */}
                 <motion.div
-                  animate={{ y: [0, 12, 0] }}
+                  animate={{ y: [0, 10, 0] }}
                   transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute bottom-4 -left-2 sm:bottom-8 sm:-left-6 bg-white rounded-2xl shadow-card p-4 lg:p-5 z-20"
+                  className="hidden sm:block absolute bottom-4 -left-2 md:bottom-6 md:-left-4 bg-white rounded-xl shadow-lg p-3 md:p-4 z-20"
                 >
-                  <div className="flex items-center gap-3">
-                    <div className="flex -space-x-3">
-                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-secondary to-secondary-dark border-2 border-white" />
-                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-primary-dark border-2 border-white" />
-                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent-blue to-accent-blue-dark border-2 border-white" />
+                  <div className="flex items-center gap-2">
+                    <div className="flex -space-x-2">
+                      <div className="w-8 h-8 rounded-full bg-gradient-to-br from-secondary to-secondary-dark border-2 border-white" />
+                      <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-primary-dark border-2 border-white" />
                     </div>
                     <div>
-                      <p className="font-semibold text-sm lg:text-base text-text-primary">500+ Recenzii</p>
+                      <p className="font-semibold text-sm text-text-primary">500+ Recenzii</p>
                       <div className="flex items-center gap-0.5">
                         {[...Array(5)].map((_, i) => (
-                          <Star key={i} size={14} className="text-warning fill-warning" />
+                          <Star key={i} size={12} className="text-warning fill-warning" />
                         ))}
                       </div>
                     </div>
@@ -174,34 +171,30 @@ export const Home = () => {
       </section>
 
       {/* Features Strip */}
-      <section style={{ paddingTop: '100px', paddingBottom: '100px' }} className="bg-gradient-to-b from-white to-cream">
-        <div className="container">
-          <div className="text-center" style={{ marginBottom: '60px' }}>
-            <h2 className="font-heading text-3xl lg:text-4xl font-bold text-text-primary">
+      <section className="py-16 md:py-20 lg:py-24 bg-gradient-to-b from-white to-cream">
+        <div className="container px-5 md:px-6">
+          <div className="text-center mb-10 md:mb-14">
+            <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-text-primary">
               De Ce Să Alegi MiniTrend?
             </h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4" style={{ gap: '40px' }}>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.15 }}
-                className="flex flex-col items-center text-center bg-white rounded-3xl shadow-card hover:shadow-hover transition-all duration-300 hover:-translate-y-2"
-                style={{ padding: '40px 30px' }}
+                transition={{ delay: index * 0.1 }}
+                className="flex flex-col items-center text-center bg-white rounded-2xl shadow-card p-5 md:p-6 lg:p-8"
               >
-                <div
-                  className="bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl flex items-center justify-center text-primary"
-                  style={{ width: '90px', height: '90px', marginBottom: '30px' }}
-                >
+                <div className="w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-xl flex items-center justify-center text-primary mb-4">
                   {feature.icon}
                 </div>
-                <h3 className="font-heading font-bold text-text-primary text-xl lg:text-2xl" style={{ marginBottom: '16px' }}>
+                <h3 className="font-heading font-bold text-text-primary text-sm md:text-base lg:text-lg mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-base lg:text-lg text-text-secondary" style={{ lineHeight: '1.8' }}>
+                <p className="text-xs md:text-sm text-text-secondary leading-relaxed">
                   {feature.description}
                 </p>
               </motion.div>
@@ -211,59 +204,55 @@ export const Home = () => {
       </section>
 
       {/* Categories */}
-      <section style={{ paddingTop: '120px', paddingBottom: '120px' }}>
-        <div className="container">
+      <section className="py-16 md:py-20 lg:py-28">
+        <div className="container px-5 md:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center"
-            style={{ marginBottom: '80px' }}
+            className="text-center mb-10 md:mb-14"
           >
-            <span
-              className="inline-flex items-center bg-primary/10 rounded-full text-primary font-semibold text-sm uppercase tracking-widest"
-              style={{ gap: '10px', padding: '14px 24px', marginBottom: '30px', display: 'inline-flex' }}
-            >
-              <Sparkles size={18} />
+            <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary font-semibold text-xs uppercase tracking-wider mb-4">
+              <Sparkles size={14} />
               Categorii
             </span>
-            <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-text-primary" style={{ marginBottom: '30px' }}>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-text-primary mb-4">
               Explorează pe Categorii
             </h2>
-            <p className="text-text-secondary text-lg lg:text-xl" style={{ maxWidth: '800px', margin: '0 auto', lineHeight: '1.8' }}>
-              Găsește hăinuțele perfecte pentru micuțul tău în categoriile noastre special concepute
+            <p className="text-text-secondary text-sm md:text-base lg:text-lg max-w-2xl mx-auto">
+              Găsește hăinuțele perfecte pentru micuțul tău în categoriile noastre
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3" style={{ gap: '40px' }}>
+          <div className="grid md:grid-cols-3 gap-5 md:gap-6 lg:gap-8">
             {categories.map((category, index) => (
               <motion.div
                 key={category.id}
-                initial={{ opacity: 0, y: 40 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.2 }}
+                transition={{ delay: index * 0.15 }}
               >
                 <Link
                   to={`/shop/${category.id}`}
-                  className="group relative block h-[450px] lg:h-[580px] rounded-[32px] overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-500"
+                  className="group relative block h-[320px] md:h-[380px] lg:h-[450px] rounded-2xl lg:rounded-3xl overflow-hidden shadow-lg"
                 >
                   <img
                     src={category.image}
                     alt={category.name}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-10 lg:p-14">
-                    <span className="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium mb-6">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-5 md:p-6 lg:p-8">
+                    <span className="inline-block px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-white text-xs font-medium mb-3">
                       {category.id === 'fete' ? '120+ Produse' : category.id === 'baieti' ? '100+ Produse' : '80+ Produse'}
                     </span>
-                    <h3 className="text-3xl lg:text-4xl font-bold text-white mb-5">
+                    <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">
                       {category.name}
                     </h3>
-                    <p className="text-white/90 text-lg lg:text-xl mb-8 leading-relaxed">{category.description}</p>
-                    <span className="inline-flex items-center gap-3 text-white font-semibold group-hover:gap-5 transition-all duration-300 text-lg bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full">
-                      Descoperă <ArrowRight size={22} />
+                    <p className="text-white/80 text-sm md:text-base mb-4 line-clamp-2">{category.description}</p>
+                    <span className="inline-flex items-center gap-2 text-white font-medium text-sm bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
+                      Descoperă <ArrowRight size={16} />
                     </span>
                   </div>
                 </Link>
@@ -274,37 +263,32 @@ export const Home = () => {
       </section>
 
       {/* New Products */}
-      <section className="bg-white" style={{ paddingTop: '120px', paddingBottom: '120px' }}>
-        <div className="container">
+      <section className="py-16 md:py-20 lg:py-28 bg-white">
+        <div className="container px-5 md:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="flex flex-col sm:flex-row sm:items-end justify-between"
-            style={{ gap: '40px', marginBottom: '60px' }}
+            className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-10 md:mb-14"
           >
             <div>
-              <span
-                className="inline-flex items-center bg-secondary/10 rounded-full text-secondary font-semibold text-sm uppercase tracking-widest"
-                style={{ gap: '10px', padding: '12px 20px', marginBottom: '20px', display: 'inline-flex' }}
-              >
-                <Sparkles size={16} />
+              <span className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/10 rounded-full text-secondary font-semibold text-xs uppercase tracking-wider mb-4">
+                <Sparkles size={14} />
                 Proaspăt sosite
               </span>
-              <h2 className="text-4xl lg:text-5xl font-bold text-text-primary">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-text-primary">
                 Noutăți în Shop
               </h2>
             </div>
             <Link
               to="/shop?filter=new"
-              className="inline-flex items-center text-primary font-semibold hover:bg-primary hover:text-white transition-all text-lg bg-primary/10 rounded-full"
-              style={{ gap: '12px', padding: '16px 28px' }}
+              className="inline-flex items-center gap-2 text-primary font-semibold hover:bg-primary hover:text-white transition-all text-sm bg-primary/10 rounded-full px-5 py-3"
             >
-              Vezi Toate Noutățile <ArrowRight size={22} />
+              Vezi Toate <ArrowRight size={18} />
             </Link>
           </motion.div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4" style={{ gap: '30px' }}>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {newProducts.map((product, index) => (
               <ProductCard key={product.id} product={product} index={index} />
             ))}
@@ -313,37 +297,37 @@ export const Home = () => {
       </section>
 
       {/* Promo Banner */}
-      <section className="py-20 lg:py-32">
-        <div className="container">
+      <section className="py-12 md:py-16 lg:py-24">
+        <div className="container px-5 md:px-6">
           <motion.div
             initial={{ opacity: 0, scale: 0.98 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="relative rounded-[32px] overflow-hidden"
+            className="relative rounded-2xl lg:rounded-3xl overflow-hidden"
           >
             <div className="absolute inset-0 gradient-primary" />
             <div className="relative z-10 grid lg:grid-cols-2 items-center">
-              <div className="p-12 lg:p-24 text-white">
-                <span className="inline-block px-6 py-3 bg-white/20 rounded-full text-sm font-semibold mb-10">
+              <div className="p-8 md:p-12 lg:p-16 text-white">
+                <span className="inline-block px-4 py-2 bg-white/20 rounded-full text-sm font-semibold mb-6">
                   Ofertă Specială
                 </span>
-                <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold mb-8 leading-tight">
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 leading-tight">
                   Până la 40% Reducere la Colecția de Sezon
                 </h2>
-                <p className="text-white/90 mb-12 text-lg lg:text-xl max-w-lg leading-relaxed">
-                  Profită de reducerile noastre și îmbracă-ți micuțul cu hăinuțe de calitate la prețuri speciale!
+                <p className="text-white/90 mb-8 text-sm md:text-base lg:text-lg max-w-lg">
+                  Profită de reducerile noastre și îmbracă-ți micuțul cu hăinuțe de calitate!
                 </p>
                 <Link to="/shop?filter=sale">
-                  <Button variant="secondary" size="lg" icon={<ArrowRight size={20} />} iconPosition="right">
+                  <Button variant="secondary" size="lg" icon={<ArrowRight size={18} />} iconPosition="right">
                     Cumpără Acum
                   </Button>
                 </Link>
               </div>
-              <div className="hidden lg:block p-16">
+              <div className="hidden lg:block p-12">
                 <img
                   src="https://images.unsplash.com/photo-1622290291468-a28f7a7dc6a8?w=600&q=80"
                   alt="Ofertă specială"
-                  className="w-full max-w-md ml-auto rounded-3xl shadow-2xl"
+                  className="w-full max-w-sm ml-auto rounded-2xl shadow-2xl"
                 />
               </div>
             </div>
@@ -352,31 +336,27 @@ export const Home = () => {
       </section>
 
       {/* Popular Products */}
-      <section className="bg-gradient-to-b from-cream to-white" style={{ paddingTop: '120px', paddingBottom: '120px' }}>
-        <div className="container">
+      <section className="py-16 md:py-20 lg:py-28 bg-gradient-to-b from-cream to-white">
+        <div className="container px-5 md:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center"
-            style={{ marginBottom: '80px' }}
+            className="text-center mb-10 md:mb-14"
           >
-            <span
-              className="inline-flex items-center bg-warning/10 rounded-full text-warning font-semibold text-sm uppercase tracking-widest"
-              style={{ gap: '10px', padding: '14px 24px', marginBottom: '30px', display: 'inline-flex' }}
-            >
-              <Star size={18} className="fill-warning" />
+            <span className="inline-flex items-center gap-2 px-4 py-2 bg-warning/10 rounded-full text-warning font-semibold text-xs uppercase tracking-wider mb-4">
+              <Star size={14} className="fill-warning" />
               Cele mai populare
             </span>
-            <h2 className="text-4xl lg:text-5xl font-bold text-text-primary" style={{ marginBottom: '24px' }}>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-text-primary mb-3">
               Favoritele Clienților
             </h2>
-            <p className="text-text-secondary text-lg lg:text-xl" style={{ maxWidth: '700px', margin: '0 auto', lineHeight: '1.8' }}>
+            <p className="text-text-secondary text-sm md:text-base lg:text-lg max-w-xl mx-auto">
               Produsele cele mai apreciate de părinții din România
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4" style={{ gap: '30px' }}>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {popularProducts.map((product, index) => (
               <ProductCard key={product.id} product={product} index={index} />
             ))}
@@ -386,10 +366,10 @@ export const Home = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="text-center mt-20"
+            className="text-center mt-12"
           >
             <Link to="/shop">
-              <Button variant="outline" size="lg" className="px-12">
+              <Button variant="outline" size="lg">
                 Vezi Toate Produsele
               </Button>
             </Link>
@@ -398,24 +378,24 @@ export const Home = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 lg:py-32">
-        <div className="container">
-          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+      <section className="py-16 md:py-20 lg:py-28">
+        <div className="container px-5 md:px-6">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
+              initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <span className="inline-block text-primary font-semibold text-sm uppercase tracking-widest mb-6">De ce MiniTrend?</span>
-              <h2 className="text-3xl lg:text-4xl font-bold text-text-primary mb-8">
+              <span className="inline-block text-primary font-semibold text-xs uppercase tracking-wider mb-4">De ce MiniTrend?</span>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-text-primary mb-6">
                 Calitate și Siguranță pentru Cei Mici
               </h2>
-              <p className="text-text-secondary text-lg lg:text-xl mb-12 leading-relaxed">
+              <p className="text-text-secondary text-sm md:text-base lg:text-lg mb-8">
                 La MiniTrend, fiecare produs trece prin verificări riguroase de calitate.
                 Folosim doar materiale certificate, sigure pentru pielea sensibilă a copiilor.
               </p>
 
-              <div className="space-y-6">
+              <div className="space-y-4">
                 {[
                   'Materiale 100% naturale și certificate',
                   'Fără substanțe chimice dăunătoare',
@@ -428,28 +408,28 @@ export const Home = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 }}
-                    className="flex items-center gap-5"
+                    className="flex items-center gap-3"
                   >
-                    <CheckCircle className="text-success flex-shrink-0" size={28} />
-                    <span className="text-text-primary font-medium text-lg">{item}</span>
+                    <CheckCircle className="text-success flex-shrink-0" size={22} />
+                    <span className="text-text-primary font-medium text-sm md:text-base">{item}</span>
                   </motion.div>
                 ))}
               </div>
 
-              <Link to="/despre" className="inline-block mt-12">
+              <Link to="/despre" className="inline-block mt-8">
                 <Button variant="outline" size="lg">Află Mai Multe</Button>
               </Link>
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, x: 30 }}
+              initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
               <img
                 src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=700&q=80"
                 alt="Calitate MiniTrend"
-                className="w-full rounded-3xl shadow-xl"
+                className="w-full rounded-2xl lg:rounded-3xl shadow-xl"
               />
             </motion.div>
           </div>
@@ -457,31 +437,27 @@ export const Home = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="bg-white" style={{ paddingTop: '120px', paddingBottom: '120px' }}>
-        <div className="container">
+      <section className="py-16 md:py-20 lg:py-28 bg-white">
+        <div className="container px-5 md:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center"
-            style={{ marginBottom: '80px' }}
+            className="text-center mb-10 md:mb-14"
           >
-            <span
-              className="inline-flex items-center bg-primary/10 rounded-full text-primary font-semibold text-sm uppercase tracking-widest"
-              style={{ gap: '10px', padding: '14px 24px', marginBottom: '30px', display: 'inline-flex' }}
-            >
-              <Heart size={18} />
+            <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary font-semibold text-xs uppercase tracking-wider mb-4">
+              <Heart size={14} />
               Testimoniale
             </span>
-            <h2 className="text-4xl lg:text-5xl font-bold text-text-primary" style={{ marginBottom: '24px' }}>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-text-primary mb-3">
               Ce Spun Părinții
             </h2>
-            <p className="text-text-secondary text-lg lg:text-xl" style={{ maxWidth: '700px', margin: '0 auto', lineHeight: '1.8' }}>
+            <p className="text-text-secondary text-sm md:text-base lg:text-lg max-w-xl mx-auto">
               Peste 10,000 de familii fericite ne-au acordat încrederea lor
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3" style={{ gap: '40px' }}>
+          <div className="grid md:grid-cols-3 gap-5 md:gap-6">
             {[
               {
                 name: 'Maria P.',
@@ -496,7 +472,7 @@ export const Home = () => {
                 avatar: 'A',
                 color: 'from-primary to-primary-dark',
                 rating: 5,
-                text: 'Livrare rapidă și ambalaj foarte frumos. Tricourile pentru băiatul meu sunt exact cum apar în poze. Super!',
+                text: 'Livrare rapidă și ambalaj foarte frumos. Tricourile pentru băiatul meu sunt exact cum apar în poze.',
                 location: 'Cluj-Napoca'
               },
               {
@@ -510,31 +486,29 @@ export const Home = () => {
             ].map((review, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 40 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.15 }}
-                className="bg-gradient-to-br from-cream to-white rounded-[32px] shadow-card hover:shadow-hover transition-all duration-300"
-                style={{ padding: '50px 40px' }}
+                transition={{ delay: index * 0.1 }}
+                className="bg-gradient-to-br from-cream to-white rounded-2xl shadow-card p-6 md:p-8"
               >
-                <div className="flex items-center" style={{ gap: '8px', marginBottom: '30px' }}>
+                <div className="flex items-center gap-1 mb-4">
                   {[...Array(review.rating)].map((_, i) => (
-                    <Star key={i} size={26} className="text-warning fill-warning" />
+                    <Star key={i} size={18} className="text-warning fill-warning" />
                   ))}
                 </div>
-                <p className="text-text-secondary text-lg lg:text-xl italic" style={{ marginBottom: '40px', lineHeight: '1.8' }}>
+                <p className="text-text-secondary text-sm md:text-base italic mb-6 leading-relaxed">
                   "{review.text}"
                 </p>
-                <div className="flex items-center" style={{ gap: '20px' }}>
+                <div className="flex items-center gap-3">
                   <div
-                    className={`rounded-full bg-gradient-to-br ${review.color} flex items-center justify-center text-white font-bold text-2xl shadow-lg`}
-                    style={{ width: '70px', height: '70px' }}
+                    className={`w-12 h-12 rounded-full bg-gradient-to-br ${review.color} flex items-center justify-center text-white font-bold text-lg`}
                   >
                     {review.avatar}
                   </div>
                   <div>
-                    <span className="font-bold text-text-primary text-xl block" style={{ marginBottom: '4px' }}>{review.name}</span>
-                    <span className="text-text-light text-base">{review.location}</span>
+                    <span className="font-bold text-text-primary text-sm md:text-base block">{review.name}</span>
+                    <span className="text-text-light text-xs md:text-sm">{review.location}</span>
                   </div>
                 </div>
               </motion.div>
@@ -542,7 +516,6 @@ export const Home = () => {
           </div>
         </div>
       </section>
-
     </div>
   );
 };
