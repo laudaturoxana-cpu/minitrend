@@ -71,7 +71,7 @@ export const Product = () => {
     : 0;
 
   return (
-    <div className="min-h-screen space-y-8 md:space-y-12 lg:space-y-14">
+    <div className="min-h-screen space-y-16 md:space-y-20 lg:space-y-24">
       {/* Breadcrumb */}
       <div className="container mx-auto px-4 py-4">
         <nav className="flex items-center gap-2 text-sm text-text-secondary">

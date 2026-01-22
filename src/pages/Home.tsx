@@ -33,7 +33,7 @@ export const Home = () => {
   ];
 
   return (
-    <div className="w-full overflow-x-hidden space-y-10 md:space-y-14 lg:space-y-20">
+    <div className="w-full overflow-x-hidden space-y-20 md:space-y-24 lg:space-y-28">
       {/* Hero Section */}
       <section className="relative min-h-[600px] lg:min-h-[calc(100vh-80px)] flex items-center py-12 md:py-16 lg:py-0">
         {/* Background */}
