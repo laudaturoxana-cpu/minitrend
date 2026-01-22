@@ -71,7 +71,7 @@ export const Product = () => {
     : 0;
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen space-y-8 md:space-y-12 lg:space-y-14">
       {/* Breadcrumb */}
       <div className="container mx-auto px-4 py-4">
         <nav className="flex items-center gap-2 text-sm text-text-secondary">
@@ -92,10 +92,10 @@ export const Product = () => {
       </div>
 
       {/* Product Section */}
-      <section className="container mx-auto px-4 py-8">
-        <div className="grid lg:grid-cols-2 gap-12">
+      <section className="container mx-auto px-4 py-10 md:py-14">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16">
           {/* Images */}
-          <div className="space-y-4">
+          <div className="space-y-5">
             <motion.div
               key={selectedImage}
               initial={{ opacity: 0 }}
@@ -133,7 +133,7 @@ export const Product = () => {
           {/* Details */}
           <div>
             {/* Badges */}
-            <div className="flex gap-2 mb-4">
+            <div className="flex gap-3 mb-5">
               {product.isNew && (
                 <span className="px-3 py-1 text-xs font-semibold bg-primary text-white rounded-full">
                   NOU
@@ -147,17 +147,17 @@ export const Product = () => {
             </div>
 
             {/* Category */}
-            <p className="text-text-light text-sm uppercase tracking-wider mb-2">
+            <p className="text-text-light text-sm uppercase tracking-wider mb-3">
               {product.category === 'fete' ? 'Fete' : product.category === 'baieti' ? 'Băieți' : 'Bebeluși'} / {product.subcategory}
             </p>
 
             {/* Name */}
-            <h1 className="font-heading text-3xl md:text-4xl font-bold text-text-primary mb-4">
+            <h1 className="font-heading text-3xl md:text-4xl font-bold text-text-primary mb-5">
               {product.name}
             </h1>
 
             {/* Rating */}
-            <div className="flex items-center gap-4 mb-6">
+            <div className="flex items-center gap-4 mb-7">
               <div className="flex items-center gap-1">
                 {[...Array(5)].map((_, i) => (
                   <Star
@@ -173,7 +173,7 @@ export const Product = () => {
             </div>
 
             {/* Price */}
-            <div className="flex items-center gap-4 mb-8">
+            <div className="flex items-center gap-4 mb-10">
               <span className="font-heading text-3xl font-bold text-primary">
                 {product.price} Lei
               </span>
@@ -185,11 +185,11 @@ export const Product = () => {
             </div>
 
             {/* Description */}
-            <p className="text-text-secondary mb-8">{product.description}</p>
+            <p className="text-text-secondary mb-10">{product.description}</p>
 
             {/* Color Selection */}
-            <div className="mb-6">
-              <p className="font-medium mb-3">
+            <div className="mb-8">
+              <p className="font-medium mb-4">
                 Culoare: <span className="text-text-secondary">{selectedColor?.name || 'Selectează'}</span>
               </p>
               <div className="flex gap-3">
@@ -213,14 +213,14 @@ export const Product = () => {
             </div>
 
             {/* Size Selection */}
-            <div className="mb-6">
-              <div className="flex items-center justify-between mb-3">
+            <div className="mb-8">
+              <div className="flex items-center justify-between mb-4">
                 <p className="font-medium">
                   Mărime: <span className="text-text-secondary">{selectedSize || 'Selectează'}</span>
                 </p>
                 <button className="text-primary text-sm hover:underline">Ghid mărimi</button>
               </div>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-3">
                 {product.sizes.map((size) => (
                   <button
                     key={size}
@@ -240,8 +240,8 @@ export const Product = () => {
             </div>
 
             {/* Quantity */}
-            <div className="mb-8">
-              <p className="font-medium mb-3">Cantitate</p>
+            <div className="mb-10">
+              <p className="font-medium mb-4">Cantitate</p>
               <div className="inline-flex items-center gap-4 bg-gray-100 rounded-xl p-2">
                 <button
                   onClick={() => setQuantity(Math.max(1, quantity - 1))}
@@ -260,7 +260,7 @@ export const Product = () => {
             </div>
 
             {/* Actions */}
-            <div className="flex gap-4 mb-8">
+            <div className="flex gap-4 mb-10">
               <Button
                 size="lg"
                 fullWidth
@@ -286,35 +286,35 @@ export const Product = () => {
             </div>
 
             {/* Features */}
-            <div className="grid grid-cols-3 gap-4 p-6 bg-gray-50 rounded-2xl">
+            <div className="grid grid-cols-3 gap-5 p-7 bg-gray-50 rounded-2xl">
               <div className="text-center">
-                <Truck size={24} className="mx-auto mb-2 text-primary" />
+                <Truck size={24} className="mx-auto mb-3 text-primary" />
                 <p className="text-xs text-text-secondary">Livrare Gratuită</p>
-                <p className="text-xs font-medium">peste 200 Lei</p>
+                <p className="text-xs font-medium mt-1">peste 200 Lei</p>
               </div>
               <div className="text-center">
-                <RefreshCw size={24} className="mx-auto mb-2 text-primary" />
+                <RefreshCw size={24} className="mx-auto mb-3 text-primary" />
                 <p className="text-xs text-text-secondary">Retur Gratuit</p>
-                <p className="text-xs font-medium">30 zile</p>
+                <p className="text-xs font-medium mt-1">30 zile</p>
               </div>
               <div className="text-center">
-                <Shield size={24} className="mx-auto mb-2 text-primary" />
+                <Shield size={24} className="mx-auto mb-3 text-primary" />
                 <p className="text-xs text-text-secondary">Plată Sigură</p>
-                <p className="text-xs font-medium">100% securizat</p>
+                <p className="text-xs font-medium mt-1">100% securizat</p>
               </div>
             </div>
 
             {/* Product Info */}
-            <div className="mt-8 space-y-3">
-              <div className="flex justify-between py-3 border-b border-gray-100">
+            <div className="mt-10 space-y-1">
+              <div className="flex justify-between py-4 border-b border-gray-100">
                 <span className="text-text-secondary">Material</span>
                 <span className="font-medium">{product.material}</span>
               </div>
-              <div className="flex justify-between py-3 border-b border-gray-100">
+              <div className="flex justify-between py-4 border-b border-gray-100">
                 <span className="text-text-secondary">Vârsta recomandată</span>
                 <span className="font-medium">{product.ageRange}</span>
               </div>
-              <div className="flex justify-between py-3 border-b border-gray-100">
+              <div className="flex justify-between py-4 border-b border-gray-100">
                 <span className="text-text-secondary">Disponibilitate</span>
                 <span className={`font-medium ${product.inStock ? 'text-success' : 'text-error'}`}>
                   {product.inStock ? 'În Stoc' : 'Stoc Epuizat'}
@@ -327,12 +327,12 @@ export const Product = () => {
 
       {/* Related Products */}
       {relatedProducts.length > 0 && (
-        <section className="py-16 bg-white">
+        <section className="py-20 md:py-28 bg-white">
           <div className="container mx-auto px-4">
-            <h2 className="font-heading text-2xl md:text-3xl font-bold text-text-primary mb-8">
+            <h2 className="font-heading text-2xl md:text-3xl font-bold text-text-primary mb-10 md:mb-12">
               Produse Similare
             </h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-8">
               {relatedProducts.map((p, index) => (
                 <ProductCard key={p.id} product={p} index={index} />
               ))}

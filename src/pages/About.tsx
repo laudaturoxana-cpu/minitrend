@@ -35,7 +35,7 @@ export const About = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen space-y-10 md:space-y-14 lg:space-y-20">
       {/* Hero */}
       <section className="relative py-24 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 gradient-hero" />

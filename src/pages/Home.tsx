@@ -33,7 +33,7 @@ export const Home = () => {
   ];
 
   return (
-    <div className="w-full overflow-x-hidden">
+    <div className="w-full overflow-x-hidden space-y-10 md:space-y-14 lg:space-y-20">
       {/* Hero Section */}
       <section className="relative min-h-[600px] lg:min-h-[calc(100vh-80px)] flex items-center py-12 md:py-16 lg:py-0">
         {/* Background */}
@@ -171,14 +171,14 @@ export const Home = () => {
       </section>
 
       {/* Features Strip */}
-      <section className="py-16 md:py-20 lg:py-24 bg-gradient-to-b from-white to-cream">
+      <section className="py-20 md:py-28 lg:py-32 bg-gradient-to-b from-white to-cream">
         <div className="container px-5 md:px-6">
-          <div className="text-center mb-10 md:mb-14">
+          <div className="text-center mb-12 md:mb-16">
             <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-text-primary">
               De Ce Să Alegi MiniTrend?
             </h2>
           </div>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 md:gap-8 lg:gap-10">
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
@@ -204,19 +204,19 @@ export const Home = () => {
       </section>
 
       {/* Categories */}
-      <section className="py-16 md:py-20 lg:py-28">
+      <section className="py-20 md:py-28 lg:py-36">
         <div className="container px-5 md:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-10 md:mb-14"
+            className="text-center mb-12 md:mb-16 lg:mb-20"
           >
-            <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary font-semibold text-xs uppercase tracking-wider mb-4">
+            <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary font-semibold text-xs uppercase tracking-wider mb-5">
               <Sparkles size={14} />
               Categorii
             </span>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-text-primary mb-4">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-text-primary mb-5">
               Explorează pe Categorii
             </h2>
             <p className="text-text-secondary text-sm md:text-base lg:text-lg max-w-2xl mx-auto">
@@ -224,7 +224,7 @@ export const Home = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-5 md:gap-6 lg:gap-8">
+          <div className="grid md:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
             {categories.map((category, index) => (
               <motion.div
                 key={category.id}
@@ -263,16 +263,16 @@ export const Home = () => {
       </section>
 
       {/* New Products */}
-      <section className="py-16 md:py-20 lg:py-28 bg-white">
+      <section className="py-20 md:py-28 lg:py-36 bg-white">
         <div className="container px-5 md:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-10 md:mb-14"
+            className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-12 md:mb-16"
           >
             <div>
-              <span className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/10 rounded-full text-secondary font-semibold text-xs uppercase tracking-wider mb-4">
+              <span className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/10 rounded-full text-secondary font-semibold text-xs uppercase tracking-wider mb-5">
                 <Sparkles size={14} />
                 Proaspăt sosite
               </span>
@@ -288,7 +288,7 @@ export const Home = () => {
             </Link>
           </motion.div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 md:gap-8">
             {newProducts.map((product, index) => (
               <ProductCard key={product.id} product={product} index={index} />
             ))}
@@ -297,7 +297,7 @@ export const Home = () => {
       </section>
 
       {/* Promo Banner */}
-      <section className="py-12 md:py-16 lg:py-24">
+      <section className="py-16 md:py-24 lg:py-32">
         <div className="container px-5 md:px-6">
           <motion.div
             initial={{ opacity: 0, scale: 0.98 }}
@@ -336,19 +336,19 @@ export const Home = () => {
       </section>
 
       {/* Popular Products */}
-      <section className="py-16 md:py-20 lg:py-28 bg-gradient-to-b from-cream to-white">
+      <section className="py-20 md:py-28 lg:py-36 bg-gradient-to-b from-cream to-white">
         <div className="container px-5 md:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-10 md:mb-14"
+            className="text-center mb-12 md:mb-16"
           >
-            <span className="inline-flex items-center gap-2 px-4 py-2 bg-warning/10 rounded-full text-warning font-semibold text-xs uppercase tracking-wider mb-4">
+            <span className="inline-flex items-center gap-2 px-4 py-2 bg-warning/10 rounded-full text-warning font-semibold text-xs uppercase tracking-wider mb-5">
               <Star size={14} className="fill-warning" />
               Cele mai populare
             </span>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-text-primary mb-3">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-text-primary mb-4">
               Favoritele Clienților
             </h2>
             <p className="text-text-secondary text-sm md:text-base lg:text-lg max-w-xl mx-auto">
@@ -356,7 +356,7 @@ export const Home = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 md:gap-8">
             {popularProducts.map((product, index) => (
               <ProductCard key={product.id} product={product} index={index} />
             ))}
@@ -366,7 +366,7 @@ export const Home = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="text-center mt-12"
+            className="text-center mt-14"
           >
             <Link to="/shop">
               <Button variant="outline" size="lg">
@@ -378,24 +378,24 @@ export const Home = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-16 md:py-20 lg:py-28">
+      <section className="py-20 md:py-28 lg:py-36">
         <div className="container px-5 md:px-6">
-          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <span className="inline-block text-primary font-semibold text-xs uppercase tracking-wider mb-4">De ce MiniTrend?</span>
+              <span className="inline-block text-primary font-semibold text-xs uppercase tracking-wider mb-5">De ce MiniTrend?</span>
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-text-primary mb-6">
                 Calitate și Siguranță pentru Cei Mici
               </h2>
-              <p className="text-text-secondary text-sm md:text-base lg:text-lg mb-8">
+              <p className="text-text-secondary text-sm md:text-base lg:text-lg mb-10">
                 La MiniTrend, fiecare produs trece prin verificări riguroase de calitate.
                 Folosim doar materiale certificate, sigure pentru pielea sensibilă a copiilor.
               </p>
 
-              <div className="space-y-4">
+              <div className="space-y-5">
                 {[
                   'Materiale 100% naturale și certificate',
                   'Fără substanțe chimice dăunătoare',
@@ -437,19 +437,19 @@ export const Home = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-16 md:py-20 lg:py-28 bg-white">
+      <section className="py-20 md:py-28 lg:py-36 bg-white">
         <div className="container px-5 md:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-10 md:mb-14"
+            className="text-center mb-12 md:mb-16"
           >
-            <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary font-semibold text-xs uppercase tracking-wider mb-4">
+            <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary font-semibold text-xs uppercase tracking-wider mb-5">
               <Heart size={14} />
               Testimoniale
             </span>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-text-primary mb-3">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-text-primary mb-4">
               Ce Spun Părinții
             </h2>
             <p className="text-text-secondary text-sm md:text-base lg:text-lg max-w-xl mx-auto">
@@ -457,7 +457,7 @@ export const Home = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-5 md:gap-6">
+          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
             {[
               {
                 name: 'Maria P.',
@@ -492,15 +492,15 @@ export const Home = () => {
                 transition={{ delay: index * 0.1 }}
                 className="bg-gradient-to-br from-cream to-white rounded-2xl shadow-card p-6 md:p-8"
               >
-                <div className="flex items-center gap-1 mb-4">
+                <div className="flex items-center gap-1 mb-5">
                   {[...Array(review.rating)].map((_, i) => (
                     <Star key={i} size={18} className="text-warning fill-warning" />
                   ))}
                 </div>
-                <p className="text-text-secondary text-sm md:text-base italic mb-6 leading-relaxed">
+                <p className="text-text-secondary text-sm md:text-base italic mb-8 leading-relaxed">
                   "{review.text}"
                 </p>
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-4">
                   <div
                     className={`w-12 h-12 rounded-full bg-gradient-to-br ${review.color} flex items-center justify-center text-white font-bold text-lg`}
                   >

@@ -94,7 +94,7 @@ export const Shop = () => {
   const hasActiveFilters = selectedSubcategory || selectedSizes.length > 0 || priceRange[0] > 0 || priceRange[1] < 500;
 
   return (
-    <div className="min-h-screen overflow-x-hidden">
+    <div className="min-h-screen overflow-x-hidden space-y-10 md:space-y-14 lg:space-y-16">
       {/* Hero Banner */}
       <section className="relative h-[200px] md:h-[250px] lg:h-[300px] overflow-hidden">
         <div
@@ -127,9 +127,9 @@ export const Shop = () => {
         </div>
       </section>
 
-      <div className="container py-8 md:py-12 lg:py-16 px-5 md:px-6">
+      <div className="container py-10 md:py-14 lg:py-20 px-5 md:px-6">
         {/* Toolbar */}
-        <div className="flex flex-wrap items-center justify-between gap-4 mb-8 md:mb-10">
+        <div className="flex flex-wrap items-center justify-between gap-4 mb-10 md:mb-12">
           <div className="flex items-center gap-3">
             {/* Filter Toggle (Mobile) */}
             <button
@@ -188,14 +188,14 @@ export const Shop = () => {
           </div>
         </div>
 
-        <div className="flex gap-6 lg:gap-10">
+        <div className="flex gap-8 lg:gap-12">
           {/* Sidebar Filters (Desktop) */}
           <aside className="hidden lg:block w-64 xl:w-72 flex-shrink-0">
-            <div className="sticky top-28 space-y-6">
+            <div className="sticky top-28 space-y-8">
               {/* Subcategories */}
-              <div className="bg-white p-5 rounded-2xl shadow-card">
-                <h3 className="font-heading font-bold text-base mb-4">Categorie</h3>
-                <div className="space-y-2">
+              <div className="bg-white p-6 rounded-2xl shadow-card">
+                <h3 className="font-heading font-bold text-base mb-5">Categorie</h3>
+                <div className="space-y-3">
                   {subcategories.map((sub) => (
                     <button
                       key={sub}
@@ -215,9 +215,9 @@ export const Shop = () => {
               </div>
 
               {/* Price Range */}
-              <div className="bg-white p-5 rounded-2xl shadow-card">
-                <h3 className="font-heading font-bold text-base mb-4">Preț</h3>
-                <div className="space-y-4">
+              <div className="bg-white p-6 rounded-2xl shadow-card">
+                <h3 className="font-heading font-bold text-base mb-5">Preț</h3>
+                <div className="space-y-5">
                   <input
                     type="range"
                     min="0"
@@ -234,9 +234,9 @@ export const Shop = () => {
               </div>
 
               {/* Sizes */}
-              <div className="bg-white p-5 rounded-2xl shadow-card">
-                <h3 className="font-heading font-bold text-base mb-4">Mărime</h3>
-                <div className="flex flex-wrap gap-2">
+              <div className="bg-white p-6 rounded-2xl shadow-card">
+                <h3 className="font-heading font-bold text-base mb-5">Mărime</h3>
+                <div className="flex flex-wrap gap-2.5">
                   {allSizes.map((size) => (
                     <button
                       key={size}
@@ -284,7 +284,7 @@ export const Shop = () => {
             ) : (
               <motion.div
                 layout
-                className={`grid grid-cols-2 gap-4 md:gap-5 ${
+                className={`grid grid-cols-2 gap-5 md:gap-7 ${
                   gridCols === 3 ? 'lg:grid-cols-3' : 'lg:grid-cols-3 xl:grid-cols-4'
                 }`}
               >
@@ -316,8 +316,8 @@ export const Shop = () => {
               transition={{ type: 'spring', damping: 25 }}
               className="absolute left-0 top-0 bottom-0 w-[280px] bg-cream overflow-y-auto"
             >
-              <div className="p-5">
-                <div className="flex items-center justify-between mb-6">
+              <div className="p-6">
+                <div className="flex items-center justify-between mb-8">
                   <h2 className="font-heading text-xl font-bold">Filtre</h2>
                   <button onClick={() => setFilterOpen(false)} className="p-2 hover:bg-gray-100 rounded-full">
                     <X size={22} />
@@ -325,11 +325,11 @@ export const Shop = () => {
                 </div>
 
                 {/* Filter content */}
-                <div className="space-y-6">
+                <div className="space-y-8">
                   {/* Subcategories */}
                   <div>
-                    <h3 className="font-heading font-bold text-base mb-4">Categorie</h3>
-                    <div className="space-y-2">
+                    <h3 className="font-heading font-bold text-base mb-5">Categorie</h3>
+                    <div className="space-y-3">
                       {subcategories.map((sub) => (
                         <button
                           key={sub}
@@ -350,7 +350,7 @@ export const Shop = () => {
 
                   {/* Price Range */}
                   <div>
-                    <h3 className="font-heading font-bold text-base mb-4">Preț</h3>
+                    <h3 className="font-heading font-bold text-base mb-5">Preț</h3>
                     <input
                       type="range"
                       min="0"
@@ -359,7 +359,7 @@ export const Shop = () => {
                       onChange={(e) => setPriceRange([priceRange[0], parseInt(e.target.value)])}
                       className="w-full accent-primary h-2"
                     />
-                    <div className="flex items-center justify-between text-sm mt-3">
+                    <div className="flex items-center justify-between text-sm mt-4">
                       <span className="px-3 py-2 bg-gray-100 rounded-lg font-medium">{priceRange[0]} Lei</span>
                       <span className="px-3 py-2 bg-gray-100 rounded-lg font-medium">{priceRange[1]} Lei</span>
                     </div>
@@ -367,8 +367,8 @@ export const Shop = () => {
 
                   {/* Sizes */}
                   <div>
-                    <h3 className="font-heading font-bold text-base mb-4">Mărime</h3>
-                    <div className="flex flex-wrap gap-2">
+                    <h3 className="font-heading font-bold text-base mb-5">Mărime</h3>
+                    <div className="flex flex-wrap gap-2.5">
                       {allSizes.map((size) => (
                         <button
                           key={size}
@@ -389,7 +389,7 @@ export const Shop = () => {
                 </div>
 
                 {/* Actions */}
-                <div className="mt-8 space-y-3">
+                <div className="mt-10 space-y-4">
                   <button
                     onClick={() => setFilterOpen(false)}
                     className="w-full py-3 bg-primary text-white font-semibold rounded-xl text-sm"
