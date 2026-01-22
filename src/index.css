@@ -49,6 +49,32 @@
   --radius-card: 20px;
   --radius-button: 12px;
   --radius-full: 9999px;
+
+  /* ===== SPACING SYSTEM (Premium E-commerce Scale) ===== */
+  /* Base unit: 4px */
+  --space-1: 4px;    /* 0.25rem - micro spacing */
+  --space-2: 8px;    /* 0.5rem  - tight spacing */
+  --space-3: 12px;   /* 0.75rem - compact spacing */
+  --space-4: 16px;   /* 1rem    - default spacing */
+  --space-5: 20px;   /* 1.25rem - comfortable spacing */
+  --space-6: 24px;   /* 1.5rem  - section padding mobile */
+  --space-8: 32px;   /* 2rem    - section padding tablet */
+  --space-10: 40px;  /* 2.5rem  - section gaps */
+  --space-12: 48px;  /* 3rem    - section padding desktop */
+  --space-16: 64px;  /* 4rem    - large section gaps */
+  --space-20: 80px;  /* 5rem    - section vertical mobile */
+  --space-24: 96px;  /* 6rem    - section vertical tablet */
+  --space-32: 128px; /* 8rem    - section vertical desktop */
+
+  /* Card Padding */
+  --card-padding-sm: 16px;  /* mobile */
+  --card-padding-md: 20px;  /* tablet */
+  --card-padding-lg: 24px;  /* desktop */
+
+  /* Grid Gaps */
+  --grid-gap-sm: 16px;  /* mobile product grid */
+  --grid-gap-md: 20px;  /* tablet product grid */
+  --grid-gap-lg: 24px;  /* desktop product grid */
 }
 
 * {
@@ -66,19 +92,20 @@ body {
   font-family: var(--font-body);
   background-color: var(--color-cream);
   color: var(--color-text-primary);
-  line-height: 1.8;
+  line-height: 1.7;
   font-size: 1rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
 }
 
-/* Typography */
+/* ===== TYPOGRAPHY with Proper Spacing ===== */
 h1 {
   font-family: var(--font-heading);
   font-weight: 700;
   line-height: 1.15;
   letter-spacing: -0.02em;
+  margin-bottom: 0.5em;
 }
 
 h2 {
@@ -86,49 +113,106 @@ h2 {
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.01em;
+  margin-bottom: 0.4em;
 }
 
 h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: 600;
   line-height: 1.4;
+  margin-bottom: 0.3em;
 }
 
 p {
-  line-height: 1.8;
+  line-height: 1.7;
   color: var(--color-text-secondary);
   margin-bottom: 0;
 }
 
-/* Container - Full width with max constraint */
+/* Paragraph spacing in content areas */
+.prose p + p {
+  margin-top: 1em;
+}
+
+/* ===== CONTAINER - Consistent Padding ===== */
 .container {
   width: 100%;
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding-left: var(--space-6);  /* 24px mobile */
+  padding-right: var(--space-6);
 }
 
 @media (min-width: 640px) {
   .container {
-    padding-left: 32px;
-    padding-right: 32px;
+    padding-left: var(--space-8);  /* 32px tablet */
+    padding-right: var(--space-8);
   }
 }
 
 @media (min-width: 1024px) {
   .container {
-    padding-left: 48px;
-    padding-right: 48px;
+    padding-left: var(--space-12);  /* 48px desktop */
+    padding-right: var(--space-12);
   }
 }
 
 @media (min-width: 1536px) {
   .container {
     max-width: 1536px;
-    padding-left: 64px;
-    padding-right: 64px;
+    padding-left: var(--space-16);  /* 64px large screens */
+    padding-right: var(--space-16);
+  }
+}
+
+/* ===== SECTION SPACING UTILITIES ===== */
+.section-padding {
+  padding-top: var(--space-20);    /* 80px mobile */
+  padding-bottom: var(--space-20);
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding-top: var(--space-24);  /* 96px tablet */
+    padding-bottom: var(--space-24);
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-padding {
+    padding-top: var(--space-32);  /* 128px desktop */
+    padding-bottom: var(--space-32);
+  }
+}
+
+/* Stack spacing utility */
+.stack-sm > * + * {
+  margin-top: var(--space-2);  /* 8px */
+}
+
+.stack-md > * + * {
+  margin-top: var(--space-4);  /* 16px */
+}
+
+.stack-lg > * + * {
+  margin-top: var(--space-6);  /* 24px */
+}
+
+/* ===== CARD COMPONENT DEFAULTS ===== */
+.card-padding {
+  padding: var(--card-padding-sm);
+}
+
+@media (min-width: 768px) {
+  .card-padding {
+    padding: var(--card-padding-md);
+  }
+}
+
+@media (min-width: 1024px) {
+  .card-padding {
+    padding: var(--card-padding-lg);
   }
 }
 
@@ -300,24 +384,4 @@ a, button {
 .card-hover:hover {
   transform: translateY(-8px);
   box-shadow: var(--shadow-hover);
-}
-
-/* Section spacing */
-.section-padding {
-  padding-top: 80px;
-  padding-bottom: 80px;
-}
-
-@media (min-width: 768px) {
-  .section-padding {
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .section-padding {
-    padding-top: 120px;
-    padding-bottom: 120px;
-  }
 }
