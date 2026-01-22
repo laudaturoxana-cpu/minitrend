@@ -188,12 +188,12 @@ export const Shop = () => {
           </div>
         </div>
 
-        <div className="flex gap-10 lg:gap-16">
+        <div className="flex gap-12 lg:gap-20">
           {/* Sidebar Filters (Desktop) */}
           <aside className="hidden lg:block w-64 xl:w-72 flex-shrink-0">
             <div className="sticky top-28 space-y-8">
               {/* Subcategories */}
-              <div className="bg-white p-6 rounded-2xl shadow-card">
+              <div className="bg-white p-8 rounded-2xl shadow-card">
                 <h3 className="font-heading font-bold text-base mb-5">Categorie</h3>
                 <div className="space-y-4">
                   {subcategories.map((sub) => (
@@ -215,7 +215,7 @@ export const Shop = () => {
               </div>
 
               {/* Price Range */}
-              <div className="bg-white p-6 rounded-2xl shadow-card">
+              <div className="bg-white p-8 rounded-2xl shadow-card">
                 <h3 className="font-heading font-bold text-base mb-5">Preț</h3>
                 <div className="space-y-5">
                   <input
@@ -234,7 +234,7 @@ export const Shop = () => {
               </div>
 
               {/* Sizes */}
-              <div className="bg-white p-6 rounded-2xl shadow-card">
+              <div className="bg-white p-8 rounded-2xl shadow-card">
                 <h3 className="font-heading font-bold text-base mb-5">Mărime</h3>
                 <div className="flex flex-wrap gap-2.5">
                   {allSizes.map((size) => (
@@ -284,7 +284,7 @@ export const Shop = () => {
             ) : (
               <motion.div
                 layout
-                className={`grid grid-cols-2 gap-10 md:gap-14 ${
+                className={`grid grid-cols-2 gap-12 md:gap-16 ${
                   gridCols === 3 ? 'lg:grid-cols-3' : 'lg:grid-cols-3 xl:grid-cols-4'
                 }`}
               >

@@ -99,9 +99,9 @@ export const ProductCard = ({ product, index = 0 }: ProductCardProps) => {
           </div>
 
           {/* Product Info */}
-          <div className="p-3 md:p-4">
+          <div className="p-4 md:p-5 lg:p-6">
             {/* Category */}
-            <p className="text-[10px] md:text-xs text-text-light uppercase tracking-wider mb-1.5 font-medium">
+            <p className="text-[10px] md:text-xs text-text-light uppercase tracking-wider mb-2 font-medium">
               {product.category === 'fete' ? 'Fete' : product.category === 'baieti' ? 'Băieți' : 'Bebeluși'}
             </p>
 
@@ -111,14 +111,14 @@ export const ProductCard = ({ product, index = 0 }: ProductCardProps) => {
             </h3>
 
             {/* Rating */}
-            <div className="flex items-center gap-1.5 mb-2">
+            <div className="flex items-center gap-1.5 mb-3">
               <Star size={12} className="md:w-3.5 md:h-3.5 text-warning fill-warning" />
               <span className="text-xs md:text-sm font-bold text-text-primary">{product.rating}</span>
               <span className="text-xs text-text-light">({product.reviews})</span>
             </div>
 
             {/* Price */}
-            <div className="flex items-baseline gap-2 flex-wrap mb-3">
+            <div className="flex items-baseline gap-2 flex-wrap mb-4">
               <span className="text-base md:text-lg font-bold text-primary">
                 {product.price} Lei
               </span>

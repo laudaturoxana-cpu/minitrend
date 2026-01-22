@@ -178,7 +178,7 @@ export const Home = () => {
               De Ce Să Alegi MiniTrend?
             </h2>
           </div>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 md:gap-14 lg:gap-16">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-12 md:gap-16 lg:gap-20">
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
@@ -224,7 +224,7 @@ export const Home = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-10 md:gap-14 lg:gap-16">
+          <div className="grid md:grid-cols-3 gap-12 md:gap-16 lg:gap-20">
             {categories.map((category, index) => (
               <motion.div
                 key={category.id}
@@ -243,7 +243,7 @@ export const Home = () => {
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-5 md:p-6 lg:p-8">
+                  <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 lg:p-10">
                     <span className="inline-block px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-white text-xs font-medium mb-3">
                       {category.id === 'fete' ? '120+ Produse' : category.id === 'baieti' ? '100+ Produse' : '80+ Produse'}
                     </span>
@@ -288,7 +288,7 @@ export const Home = () => {
             </Link>
           </motion.div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 md:gap-14">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-12 md:gap-16">
             {newProducts.map((product, index) => (
               <ProductCard key={product.id} product={product} index={index} />
             ))}
@@ -356,7 +356,7 @@ export const Home = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 md:gap-14">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-12 md:gap-16">
             {popularProducts.map((product, index) => (
               <ProductCard key={product.id} product={product} index={index} />
             ))}
@@ -457,7 +457,7 @@ export const Home = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-10 md:gap-14">
+          <div className="grid md:grid-cols-3 gap-12 md:gap-16">
             {[
               {
                 name: 'Maria P.',
