@@ -286,7 +286,7 @@ export const Product = () => {
             </div>
 
             {/* Features */}
-            <div className="grid grid-cols-3 gap-5 p-7 bg-gray-50 rounded-2xl">
+            <div className="grid grid-cols-3 gap-8 p-7 bg-gray-50 rounded-2xl">
               <div className="text-center">
                 <Truck size={24} className="mx-auto mb-3 text-primary" />
                 <p className="text-xs text-text-secondary">Livrare Gratuită</p>
@@ -332,7 +332,7 @@ export const Product = () => {
             <h2 className="font-heading text-2xl md:text-3xl font-bold text-text-primary mb-10 md:mb-12">
               Produse Similare
             </h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
               {relatedProducts.map((p, index) => (
                 <ProductCard key={p.id} product={p} index={index} />
               ))}

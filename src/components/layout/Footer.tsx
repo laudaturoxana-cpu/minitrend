@@ -37,7 +37,7 @@ export const Footer = () => {
 
       {/* Main Footer */}
       <div className="container px-5 md:px-6 py-12 md:py-16 lg:py-20">
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 lg:gap-12">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12 lg:gap-16">
           {/* Brand Column */}
           <div className="col-span-2 md:col-span-2 lg:col-span-1 lg:pr-4">
             <Logo size="md" />

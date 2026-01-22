@@ -98,7 +98,7 @@ export const About = () => {
       {/* Stats */}
       <section className="py-20 lg:py-24 bg-white">
         <div className="container">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-10 lg:gap-16">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 lg:gap-20">
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -170,7 +170,7 @@ export const About = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-14">
             {values.map((value, index) => (
               <motion.div
                 key={value.title}
@@ -208,7 +208,7 @@ export const About = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-10 lg:gap-16 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-12 lg:gap-20 max-w-5xl mx-auto">
             {[
               { name: 'Maria Ionescu', role: 'Fondator & CEO', initials: 'MI' },
               { name: 'Andrei Popa', role: 'Director Creativ', initials: 'AP' },

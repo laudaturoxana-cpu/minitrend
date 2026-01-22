@@ -64,7 +64,7 @@ export const Contact = () => {
       {/* Contact Info Cards */}
       <section className="py-16 -mt-20 relative z-10">
         <div className="container">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
             {contactInfo.map((info, index) => (
               <motion.div
                 key={info.title}
@@ -91,7 +91,7 @@ export const Contact = () => {
       {/* Contact Form & Map */}
       <section className="py-20 lg:py-28">
         <div className="container">
-          <div className="grid lg:grid-cols-2 gap-16 lg:gap-20">
+          <div className="grid lg:grid-cols-2 gap-20 lg:gap-24">
             {/* Form */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -117,7 +117,7 @@ export const Contact = () => {
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-8">
-                  <div className="grid md:grid-cols-2 gap-8">
+                  <div className="grid md:grid-cols-2 gap-10">
                     <div>
                       <label className="block text-base font-medium mb-3">Numele tău</label>
                       <input

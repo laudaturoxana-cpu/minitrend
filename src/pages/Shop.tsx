@@ -284,7 +284,7 @@ export const Shop = () => {
             ) : (
               <motion.div
                 layout
-                className={`grid grid-cols-2 gap-5 md:gap-7 ${
+                className={`grid grid-cols-2 gap-8 md:gap-12 ${
                   gridCols === 3 ? 'lg:grid-cols-3' : 'lg:grid-cols-3 xl:grid-cols-4'
                 }`}
               >

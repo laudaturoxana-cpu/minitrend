@@ -178,7 +178,7 @@ export const Home = () => {
               De Ce Să Alegi MiniTrend?
             </h2>
           </div>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 md:gap-8 lg:gap-10">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 lg:gap-14">
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
@@ -224,7 +224,7 @@ export const Home = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
+          <div className="grid md:grid-cols-3 gap-8 md:gap-12 lg:gap-14">
             {categories.map((category, index) => (
               <motion.div
                 key={category.id}
@@ -288,7 +288,7 @@ export const Home = () => {
             </Link>
           </motion.div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 md:gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
             {newProducts.map((product, index) => (
               <ProductCard key={product.id} product={product} index={index} />
             ))}
@@ -356,7 +356,7 @@ export const Home = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 md:gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
             {popularProducts.map((product, index) => (
               <ProductCard key={product.id} product={product} index={index} />
             ))}
@@ -457,7 +457,7 @@ export const Home = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid md:grid-cols-3 gap-8 md:gap-12">
             {[
               {
                 name: 'Maria P.',
