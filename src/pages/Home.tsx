@@ -243,15 +243,17 @@ export const Home = () => {
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 lg:p-10">
+                  <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 lg:p-10 text-center flex flex-col items-center">
                     <span className="inline-block px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-white text-xs font-medium mb-3">
                       {category.id === 'fete' ? '120+ Produse' : category.id === 'baieti' ? '100+ Produse' : '80+ Produse'}
                     </span>
                     <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">
                       {category.name}
                     </h3>
-                    <p className="text-white/80 text-sm md:text-base mb-4 line-clamp-2">{category.description}</p>
-                    <span className="inline-flex items-center gap-2 text-white font-medium text-sm bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
+                    <p className="text-white/80 text-sm md:text-base mb-4 line-clamp-2">
+                      {category.description}
+                    </p>
+                    <span className="inline-flex items-center justify-center gap-2 text-white font-medium text-sm bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
                       Descoperă <ArrowRight size={16} />
                     </span>
                   </div>
@@ -325,7 +327,7 @@ export const Home = () => {
               </div>
               <div className="hidden lg:block p-12">
                 <img
-                  src="https://images.unsplash.com/photo-1622290291468-a28f7a7dc6a8?w=600&q=80"
+                  src="https://images.unsplash.com/photo-1519689680058-324335c77eba?w=600&q=80"
                   alt="Ofertă specială"
                   className="w-full max-w-sm ml-auto rounded-2xl shadow-2xl"
                 />

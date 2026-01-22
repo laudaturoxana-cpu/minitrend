@@ -99,14 +99,14 @@ export const ProductCard = ({ product, index = 0 }: ProductCardProps) => {
           </div>
 
           {/* Product Info */}
-          <div className="p-4 md:p-5 lg:p-6">
+          <div className="p-4 md:p-4 lg:p-5">
             {/* Category */}
             <p className="text-[10px] md:text-xs text-text-light uppercase tracking-wider mb-2 font-medium">
               {product.category === 'fete' ? 'Fete' : product.category === 'baieti' ? 'Băieți' : 'Bebeluși'}
             </p>
 
             {/* Name */}
-            <h3 className="font-heading font-bold text-text-primary text-sm md:text-base mb-2 line-clamp-2 min-h-[2.5rem] md:min-h-[3rem] group-hover:text-primary transition-colors leading-tight">
+            <h3 className="font-heading font-bold text-text-primary text-sm md:text-base mb-2 line-clamp-2 group-hover:text-primary transition-colors leading-snug">
               {product.name}
             </h3>
 
@@ -118,7 +118,7 @@ export const ProductCard = ({ product, index = 0 }: ProductCardProps) => {
             </div>
 
             {/* Price */}
-            <div className="flex items-baseline gap-2 flex-wrap mb-4">
+            <div className="flex items-baseline gap-2 flex-wrap mb-3">
               <span className="text-base md:text-lg font-bold text-primary">
                 {product.price} Lei
               </span>
