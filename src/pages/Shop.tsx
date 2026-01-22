@@ -94,7 +94,7 @@ export const Shop = () => {
   const hasActiveFilters = selectedSubcategory || selectedSizes.length > 0 || priceRange[0] > 0 || priceRange[1] < 500;
 
   return (
-    <div className="min-h-screen overflow-x-hidden space-y-20 md:space-y-24 lg:space-y-28">
+    <div className="min-h-screen overflow-x-hidden">
       {/* Hero Banner */}
       <section className="relative h-[200px] md:h-[250px] lg:h-[300px] overflow-hidden">
         <div

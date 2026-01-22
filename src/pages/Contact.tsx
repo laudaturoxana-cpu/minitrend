@@ -46,7 +46,7 @@ export const Contact = () => {
   ];
 
   return (
-    <div className="min-h-screen space-y-20 md:space-y-24 lg:space-y-28">
+    <div className="min-h-screen">
       {/* Hero */}
       <section className="relative h-[350px] lg:h-[400px] bg-gradient-to-r from-primary to-primary-dark flex items-center">
         <div className="container text-center text-white">

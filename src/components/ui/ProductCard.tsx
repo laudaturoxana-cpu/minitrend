@@ -44,7 +44,7 @@ export const ProductCard = ({ product, index = 0 }: ProductCardProps) => {
       <Link to={`/produs/${product.id}`} className="block h-full">
         <div className="relative h-full overflow-hidden rounded-xl md:rounded-2xl bg-white shadow-soft hover:shadow-hover transition-all duration-300">
           {/* Image Container */}
-          <div className="relative aspect-[3/4] overflow-hidden">
+          <div className="relative aspect-[4/3] overflow-hidden">
             <img
               src={product.images[0]}
               alt={product.name}

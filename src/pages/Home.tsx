@@ -33,7 +33,7 @@ export const Home = () => {
   ];
 
   return (
-    <div className="w-full overflow-x-hidden space-y-20 md:space-y-24 lg:space-y-28">
+    <div className="w-full overflow-x-hidden">
       {/* Hero Section */}
       <section className="relative min-h-[600px] lg:min-h-[calc(100vh-80px)] flex items-center py-20 md:py-24 lg:py-28">
         {/* Background */}
@@ -242,7 +242,7 @@ export const Home = () => {
                     alt={category.name}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 lg:p-10 text-center flex flex-col items-center">
                     <span className="inline-block px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-white text-xs font-medium mb-3">
                       {category.id === 'fete' ? '120+ Produse' : category.id === 'baieti' ? '100+ Produse' : '80+ Produse'}
