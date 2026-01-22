@@ -193,8 +193,8 @@ export const Shop = () => {
           <aside className="hidden lg:block w-64 xl:w-72 flex-shrink-0">
             <div className="sticky top-28 space-y-6">
               {/* Subcategories */}
-              <div className="bg-white p-6 rounded-2xl shadow-card">
-                <h3 className="font-heading font-bold text-base mb-5">Categorie</h3>
+              <div className="bg-white p-5 rounded-2xl shadow-card">
+                <h3 className="font-heading font-bold text-base mb-4">Categorie</h3>
                 <div className="space-y-2">
                   {subcategories.map((sub) => (
                     <button
@@ -215,8 +215,8 @@ export const Shop = () => {
               </div>
 
               {/* Price Range */}
-              <div className="bg-white p-6 rounded-2xl shadow-card">
-                <h3 className="font-heading font-bold text-base mb-5">Preț</h3>
+              <div className="bg-white p-5 rounded-2xl shadow-card">
+                <h3 className="font-heading font-bold text-base mb-4">Preț</h3>
                 <div className="space-y-4">
                   <input
                     type="range"
@@ -234,9 +234,9 @@ export const Shop = () => {
               </div>
 
               {/* Sizes */}
-              <div className="bg-white p-6 rounded-2xl shadow-card">
-                <h3 className="font-heading font-bold text-base mb-5">Mărime</h3>
-                <div className="flex flex-wrap gap-2.5">
+              <div className="bg-white p-5 rounded-2xl shadow-card">
+                <h3 className="font-heading font-bold text-base mb-4">Mărime</h3>
+                <div className="flex flex-wrap gap-2">
                   {allSizes.map((size) => (
                     <button
                       key={size}
@@ -284,7 +284,7 @@ export const Shop = () => {
             ) : (
               <motion.div
                 layout
-                className={`grid grid-cols-2 gap-4 md:gap-5 lg:gap-6 ${
+                className={`grid grid-cols-2 gap-4 md:gap-5 ${
                   gridCols === 3 ? 'lg:grid-cols-3' : 'lg:grid-cols-3 xl:grid-cols-4'
                 }`}
               >
