@@ -429,7 +429,7 @@ export const Home = () => {
               viewport={{ once: true }}
             >
               <img
-                src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=700&q=80"
+                src="https://images.unsplash.com/photo-1503919545889-aef636e10ad4?w=700&q=80"
                 alt="Calitate MiniTrend"
                 className="w-full rounded-2xl lg:rounded-3xl shadow-xl"
               />

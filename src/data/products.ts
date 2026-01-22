@@ -14,7 +14,7 @@ export const products: Product[] = [
     category: 'fete',
     subcategory: 'rochite',
     images: [
-      'https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=500&q=80',
+      'https://images.unsplash.com/photo-1519689680058-324335c77eba?w=500&q=80',
     ],
     sizes: ['2-3 ani', '3-4 ani', '4-5 ani', '5-6 ani', '6-7 ani'],
     colors: [
@@ -37,7 +37,7 @@ export const products: Product[] = [
     category: 'fete',
     subcategory: 'rochite',
     images: [
-      'https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=500&q=80',
+      'https://images.unsplash.com/photo-1519689680058-324335c77eba?w=500&q=80',
     ],
     sizes: ['2-3 ani', '3-4 ani', '4-5 ani', '5-6 ani'],
     colors: [
@@ -59,7 +59,7 @@ export const products: Product[] = [
     category: 'fete',
     subcategory: 'rochite',
     images: [
-      'https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=500&q=80',
+      'https://images.unsplash.com/photo-1519689680058-324335c77eba?w=500&q=80',
     ],
     sizes: ['1-2 ani', '2-3 ani', '3-4 ani', '4-5 ani'],
     colors: [
@@ -82,7 +82,7 @@ export const products: Product[] = [
     category: 'fete',
     subcategory: 'bluze',
     images: [
-      'https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=500&q=80',
+      'https://images.unsplash.com/photo-1519689680058-324335c77eba?w=500&q=80',
     ],
     sizes: ['2-3 ani', '3-4 ani', '4-5 ani', '5-6 ani', '6-7 ani', '7-8 ani'],
     colors: [
@@ -105,7 +105,7 @@ export const products: Product[] = [
     category: 'fete',
     subcategory: 'bluze',
     images: [
-      'https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=500&q=80',
+      'https://images.unsplash.com/photo-1519689680058-324335c77eba?w=500&q=80',
     ],
     sizes: ['3-4 ani', '4-5 ani', '5-6 ani', '6-7 ani'],
     colors: [
@@ -129,7 +129,7 @@ export const products: Product[] = [
     category: 'fete',
     subcategory: 'pantaloni',
     images: [
-      'https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=500&q=80',
+      'https://images.unsplash.com/photo-1519689680058-324335c77eba?w=500&q=80',
     ],
     sizes: ['2-3 ani', '3-4 ani', '4-5 ani', '5-6 ani', '6-7 ani'],
     colors: [
@@ -150,7 +150,7 @@ export const products: Product[] = [
     category: 'fete',
     subcategory: 'pantaloni',
     images: [
-      'https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=500&q=80',
+      'https://images.unsplash.com/photo-1519689680058-324335c77eba?w=500&q=80',
     ],
     sizes: ['2-3 ani', '3-4 ani', '4-5 ani', '5-6 ani', '6-7 ani', '7-8 ani'],
     colors: [
@@ -397,7 +397,7 @@ export const categories = [
     id: 'fete',
     name: 'Fete',
     description: 'Rochițe, bluze și pantaloni pentru fetițe',
-    image: 'https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1519689680058-324335c77eba?w=600&q=80',
     color: '#F472B6',
   },
   {

@@ -97,7 +97,7 @@ h3, h4, h5, h6 {
   margin-bottom: 0.7em;
 }
 
-p {
+:where(p) {
   line-height: 2;
   color: var(--color-text-secondary);
   margin-bottom: 1.1em;
@@ -195,7 +195,6 @@ button {
   font-family: inherit;
   cursor: pointer;
   border: none;
-  background: none;
 }
 
 /* Animations */
