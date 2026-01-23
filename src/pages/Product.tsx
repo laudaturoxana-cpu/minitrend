@@ -92,7 +92,7 @@ export const Product = () => {
       </div>
 
       {/* Product Section */}
-      <section className="container mx-auto px-4 py-10 md:py-14">
+      <section className="container mx-auto px-4 py-16 md:py-20 lg:py-24">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16">
           {/* Images */}
           <div className="space-y-5">
