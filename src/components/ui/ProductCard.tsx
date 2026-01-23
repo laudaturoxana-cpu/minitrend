@@ -42,7 +42,7 @@ export const ProductCard = ({ product, index = 0 }: ProductCardProps) => {
       className="group h-full"
     >
       <Link to={`/produs/${product.id}`} className="block h-full">
-        <div className="relative h-full overflow-hidden rounded-xl md:rounded-2xl bg-white shadow-soft hover:shadow-hover transition-all duration-300">
+        <div className="relative h-full overflow-hidden rounded-xl md:rounded-2xl bg-white shadow-soft hover:shadow-hover transition-all duration-300 flex flex-col">
           {/* Image Container */}
           <div className="relative aspect-[4/3] overflow-hidden">
             <img
@@ -99,14 +99,14 @@ export const ProductCard = ({ product, index = 0 }: ProductCardProps) => {
           </div>
 
           {/* Product Info */}
-          <div className="p-4 md:p-4 lg:p-5">
+          <div className="p-4 md:p-4 lg:p-5 flex flex-col flex-1">
             {/* Category */}
             <p className="text-[10px] md:text-xs text-text-light uppercase tracking-wider mb-2 font-medium">
               {product.category === 'fete' ? 'Fete' : product.category === 'baieti' ? 'Băieți' : 'Bebeluși'}
             </p>
 
             {/* Name */}
-            <h3 className="font-heading font-bold text-text-primary text-sm md:text-base mb-2 line-clamp-2 group-hover:text-primary transition-colors leading-snug">
+            <h3 className="font-heading font-bold text-text-primary text-sm md:text-base mb-2 line-clamp-2 group-hover:text-primary transition-colors leading-snug min-h-[2.5rem] md:min-h-[3rem]">
               {product.name}
             </h3>
 
@@ -130,7 +130,7 @@ export const ProductCard = ({ product, index = 0 }: ProductCardProps) => {
             </div>
 
             {/* Color Options */}
-            <div className="flex items-center gap-1.5">
+            <div className="flex items-center gap-1.5 mt-auto">
               {product.colors.slice(0, 3).map((color) => (
                 <div
                   key={color.name}

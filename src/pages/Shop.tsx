@@ -188,7 +188,7 @@ export const Shop = () => {
           </div>
         </div>
 
-        <div className="flex gap-12 lg:gap-20">
+        <div className="flex gap-10 lg:gap-14">
           {/* Sidebar Filters (Desktop) */}
           <aside className="hidden lg:block w-64 xl:w-72 flex-shrink-0">
             <div className="sticky top-28 space-y-8">
@@ -284,7 +284,7 @@ export const Shop = () => {
             ) : (
               <motion.div
                 layout
-                className={`grid grid-cols-2 gap-12 md:gap-16 ${
+                className={`grid grid-cols-2 gap-8 md:gap-10 lg:gap-12 ${
                   gridCols === 3 ? 'lg:grid-cols-3' : 'lg:grid-cols-3 xl:grid-cols-4'
                 }`}
               >

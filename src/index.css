@@ -108,12 +108,12 @@ p:last-child {
 }
 
 .premium-spacing section {
-  padding-top: clamp(48px, 6vw, 96px);
-  padding-bottom: clamp(48px, 6vw, 96px);
+  padding-top: clamp(56px, 7vw, 112px) !important;
+  padding-bottom: clamp(56px, 7vw, 112px) !important;
 }
 
 .premium-spacing section:first-child {
-  padding-top: clamp(64px, 8vw, 120px);
+  padding-top: clamp(72px, 9vw, 128px) !important;
 }
 
 /* Container - Full width with max constraint */
