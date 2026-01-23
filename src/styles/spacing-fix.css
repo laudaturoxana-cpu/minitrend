@@ -127,3 +127,69 @@ h2 + p,
 h3 + p {
   margin-top: 1rem !important;
 }
+
+/* NEWSLETTER SECTION - Fix specific */
+footer section:first-child {
+  padding-top: 5rem !important;
+  padding-bottom: 5rem !important;
+  margin-bottom: 4rem !important;
+}
+
+@media (min-width: 768px) {
+  footer section:first-child {
+    padding-top: 6rem !important;
+    padding-bottom: 6rem !important;
+    margin-bottom: 5rem !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  footer section:first-child {
+    padding-top: 7rem !important;
+    padding-bottom: 7rem !important;
+    margin-bottom: 6rem !important;
+  }
+}
+
+/* Newsletter title - mai mare */
+footer section:first-child h2 {
+  font-size: clamp(2rem, 5vw, 3rem) !important;
+  margin-bottom: 1.5rem !important;
+  text-align: center !important;
+}
+
+/* Newsletter subtitle - centrat */
+footer section:first-child p {
+  font-size: clamp(1rem, 2vw, 1.25rem) !important;
+  text-align: center !important;
+  margin-bottom: 2rem !important;
+}
+
+/* Newsletter form - centrat și mai larg */
+footer section:first-child form {
+  max-width: 600px !important;
+  margin: 0 auto !important;
+}
+
+/* Newsletter input și button - mai mari */
+footer section:first-child input {
+  padding: 1rem 1.5rem !important;
+  font-size: 1rem !important;
+}
+
+footer section:first-child button {
+  padding: 1rem 2rem !important;
+  font-size: 1rem !important;
+  margin: 0 !important;
+}
+
+/* Footer main section - padding extra sus */
+footer section:last-child {
+  padding-top: 5rem !important;
+}
+
+@media (min-width: 768px) {
+  footer section:last-child {
+    padding-top: 6rem !important;
+  }
+}
