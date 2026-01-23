@@ -110,6 +110,7 @@ export const Shop = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
+            className="section-head"
           >
             <h1 className="font-heading text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-2 md:mb-4">
               {filter === 'new'

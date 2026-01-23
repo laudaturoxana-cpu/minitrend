@@ -44,17 +44,18 @@ export const About = () => {
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
+              className="section-head"
             >
               <div className="inline-flex items-center gap-3 px-5 py-3 bg-primary/10 rounded-full text-primary font-medium text-sm mb-8">
                 <Sparkles size={18} />
                 Povestea Noastră
               </div>
-              <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary mb-8 leading-tight">
+              <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary leading-tight">
                 Creăm{' '}
                 <span className="text-gradient">Amintiri Frumoase</span>{' '}
                 pentru Copilărie
               </h1>
-              <p className="text-lg lg:text-xl text-text-secondary mb-10 leading-relaxed">
+              <p className="text-lg lg:text-xl text-text-secondary leading-relaxed">
                 La MiniTrend, credem că fiecare copil merită să se simtă special.
                 De aceea, am creat un loc unde părinții pot găsi hăinuțe de calitate
                 superioară, confortabile și la modă pentru micuții lor.
@@ -129,17 +130,18 @@ export const About = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
+              className="section-head"
             >
-              <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold mb-10">
+              <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold">
                 Cum a Început Totul
               </h2>
-              <p className="text-text-secondary text-lg lg:text-xl mb-8 leading-relaxed">
+              <p className="text-text-secondary text-lg lg:text-xl leading-relaxed">
                 MiniTrend s-a născut din dorința unei mame de a găsi haine de calitate
                 pentru copilul ei. După ore întregi de căutări și dezamăgiri, am decis
                 să creăm ceea ce nu am găsit - un magazin care pune pe primul loc
                 confortul și siguranța copiilor.
               </p>
-              <p className="text-text-secondary text-lg lg:text-xl mb-8 leading-relaxed">
+              <p className="text-text-secondary text-lg lg:text-xl leading-relaxed">
                 Astăzi, suntem mândri să servim mii de familii din România, oferindu-le
                 hăinuțe adorabile, din materiale sigure și certificate, la prețuri
                 accesibile.
@@ -160,9 +162,9 @@ export const About = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-16 lg:mb-20"
+            className="text-center mb-16 lg:mb-20 section-head"
           >
-            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold">
               Valorile Noastre
             </h2>
             <p className="text-text-secondary max-w-2xl mx-auto text-lg lg:text-xl leading-relaxed">
@@ -198,9 +200,9 @@ export const About = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-16 lg:mb-20"
+            className="text-center mb-16 lg:mb-20 section-head"
           >
-            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold">
               Echipa Noastră
             </h2>
             <p className="text-text-secondary max-w-2xl mx-auto text-lg lg:text-xl leading-relaxed">
@@ -240,11 +242,12 @@ export const About = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            className="section-head"
           >
-            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold mb-8">
+            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold">
               Hai să Facem Copilăria Mai Frumoasă!
             </h2>
-            <p className="text-white/90 mb-12 max-w-2xl mx-auto text-lg lg:text-xl leading-relaxed">
+            <p className="text-white/90 max-w-2xl mx-auto text-lg lg:text-xl leading-relaxed">
               Descoperă colecția noastră de hăinuțe adorabile și oferă-i copilului tău
               confortul pe care îl merită.
             </p>

@@ -99,12 +99,29 @@ h3, h4, h5, h6 {
 
 :where(p) {
   line-height: 2;
-  color: var(--color-text-secondary);
+  color: inherit;
   margin-bottom: 1.1em;
 }
 
 p:last-child {
   margin-bottom: 0;
+}
+
+.section-head {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(12px, 1.2vw, 20px);
+}
+
+.section-head h1,
+.section-head h2,
+.section-head h3,
+.section-head h4,
+.section-head h5,
+.section-head h6,
+.section-head p,
+.section-head > span {
+  margin-bottom: 0 !important;
 }
 
 

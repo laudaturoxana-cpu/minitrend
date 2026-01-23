@@ -52,31 +52,31 @@ export const Home = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="order-2 lg:order-1 text-center lg:text-left"
+            className="order-2 lg:order-1 text-center lg:text-left section-head"
             >
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full text-primary font-semibold text-xs md:text-sm mb-6"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full text-primary font-semibold text-xs md:text-sm"
               >
                 <Sparkles size={16} />
                 <span>Colecția Primăvară 2026</span>
               </motion.div>
 
-              <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-text-primary mb-6 leading-tight">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-text-primary leading-tight">
                 Hăinuțe{' '}
                 <span className="text-gradient">Adorabile</span>
                 <br />
                 pentru Prichindei
               </h1>
 
-              <p className="text-base md:text-lg text-text-secondary mb-8 max-w-xl mx-auto lg:mx-0">
+              <p className="text-base md:text-lg text-text-secondary max-w-xl mx-auto lg:mx-0">
                 Descoperă colecția noastră de haine pentru copii – rochițe de vis,
                 tricouri cool și pantaloni confortabili.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-10">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Link to="/shop">
                   <Button size="lg" icon={<ArrowRight size={18} />} iconPosition="right" className="w-full sm:w-auto">
                     Descoperă Colecția
@@ -90,7 +90,7 @@ export const Home = () => {
               </div>
 
               {/* Stats */}
-              <div className="flex flex-wrap justify-center lg:justify-start gap-6 md:gap-10">
+              <div className="flex flex-wrap justify-center lg:justify-start gap-6 md:gap-10 pt-4">
                 <div className="text-center lg:text-left">
                   <p className="text-2xl md:text-3xl font-bold text-primary">500+</p>
                   <p className="text-text-secondary text-sm">Produse</p>
@@ -173,7 +173,7 @@ export const Home = () => {
       {/* Features Strip */}
       <section className="py-16 md:py-20 lg:py-24 bg-gradient-to-b from-white to-cream">
         <div className="container px-5 md:px-6">
-          <div className="text-center mb-16 md:mb-20">
+          <div className="text-center mb-16 md:mb-20 section-head">
             <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-text-primary">
               De Ce Să Alegi MiniTrend?
             </h2>
@@ -210,7 +210,7 @@ export const Home = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-16 md:mb-20 lg:mb-24"
+            className="text-center mb-16 md:mb-20 lg:mb-24 section-head"
           >
             <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary font-semibold text-xs uppercase tracking-wider mb-5">
               <Sparkles size={14} />
@@ -273,7 +273,7 @@ export const Home = () => {
             viewport={{ once: true }}
             className="flex flex-col sm:flex-row sm:items-end justify-between gap-8 mb-16 md:mb-20"
           >
-            <div>
+            <div className="section-head">
               <span className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/10 rounded-full text-secondary font-semibold text-xs uppercase tracking-wider mb-5">
                 <Sparkles size={14} />
                 Proaspăt sosite
@@ -344,7 +344,7 @@ export const Home = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-16 md:mb-20"
+            className="text-center mb-16 md:mb-20 section-head"
           >
             <span className="inline-flex items-center gap-2 px-4 py-2 bg-warning/10 rounded-full text-warning font-semibold text-xs uppercase tracking-wider mb-5">
               <Star size={14} className="fill-warning" />
@@ -445,7 +445,7 @@ export const Home = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-16 md:mb-20"
+            className="text-center mb-16 md:mb-20 section-head"
           >
             <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary font-semibold text-xs uppercase tracking-wider mb-5">
               <Heart size={14} />

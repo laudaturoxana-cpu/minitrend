@@ -50,8 +50,8 @@ export const Contact = () => {
       {/* Hero */}
       <section className="relative h-[350px] lg:h-[400px] bg-gradient-to-r from-primary to-primary-dark flex items-center">
         <div className="container text-center text-white">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="section-head">
+            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold">
               Contactează-ne
             </h1>
             <p className="text-white/90 max-w-2xl mx-auto text-lg lg:text-xl leading-relaxed">
@@ -198,11 +198,11 @@ export const Contact = () => {
 
       {/* FAQ Preview */}
       <section className="py-16 md:py-20 lg:py-24 bg-white">
-        <div className="container text-center">
-          <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold mb-6">
+        <div className="container text-center section-head">
+          <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold">
             Ai întrebări frecvente?
           </h2>
-          <p className="text-text-secondary mb-10 max-w-2xl mx-auto text-lg leading-relaxed">
+          <p className="text-text-secondary max-w-2xl mx-auto text-lg leading-relaxed">
             Verifică pagina noastră de întrebări frecvente pentru răspunsuri rapide la cele mai comune întrebări.
           </p>
           <Button variant="outline" size="lg">Vezi FAQ</Button>
