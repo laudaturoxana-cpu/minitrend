@@ -37,7 +37,7 @@ export const About = () => {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="relative py-24 lg:py-32 overflow-hidden">
+      <section className="relative py-20 md:py-24 lg:py-28 overflow-hidden">
         <div className="absolute inset-0 gradient-hero" />
         <div className="container relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
@@ -96,7 +96,7 @@ export const About = () => {
       </section>
 
       {/* Stats */}
-      <section className="py-20 lg:py-24 bg-white">
+      <section className="py-16 md:py-20 lg:py-24 bg-white">
         <div className="container">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-12 lg:gap-20">
             {stats.map((stat, index) => (
@@ -122,7 +122,7 @@ export const About = () => {
       </section>
 
       {/* Our Story */}
-      <section className="py-20 lg:py-32">
+      <section className="py-16 md:py-20 lg:py-24">
         <div className="container">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -154,7 +154,7 @@ export const About = () => {
       </section>
 
       {/* Values */}
-      <section className="py-20 lg:py-32 bg-white">
+      <section className="py-16 md:py-20 lg:py-24 bg-white">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -192,7 +192,7 @@ export const About = () => {
       </section>
 
       {/* Team */}
-      <section className="py-20 lg:py-32">
+      <section className="py-16 md:py-20 lg:py-24">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -234,7 +234,7 @@ export const About = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-20 lg:py-28 bg-gradient-to-r from-primary to-primary-dark">
+      <section className="py-16 md:py-20 lg:py-24 bg-gradient-to-r from-primary to-primary-dark">
         <div className="container text-center text-white">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

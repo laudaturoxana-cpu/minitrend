@@ -107,14 +107,6 @@ p:last-child {
   margin-bottom: 0;
 }
 
-.premium-spacing section {
-  padding-top: clamp(56px, 7vw, 112px) !important;
-  padding-bottom: clamp(56px, 7vw, 112px) !important;
-}
-
-.premium-spacing section:first-child {
-  padding-top: clamp(72px, 9vw, 128px) !important;
-}
 
 /* Container - Full width with max constraint */
 .container {

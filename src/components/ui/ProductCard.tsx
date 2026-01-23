@@ -39,10 +39,10 @@ export const ProductCard = ({ product, index = 0 }: ProductCardProps) => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, delay: index * 0.05 }}
-      className="group h-full"
+      className="group"
     >
-      <Link to={`/produs/${product.id}`} className="block h-full">
-        <div className="relative h-full overflow-hidden rounded-xl md:rounded-2xl bg-white shadow-soft hover:shadow-hover transition-all duration-300 flex flex-col">
+      <Link to={`/produs/${product.id}`} className="block">
+        <div className="relative overflow-hidden rounded-xl md:rounded-2xl bg-white shadow-soft hover:shadow-hover transition-all duration-300 flex flex-col">
           {/* Image Container */}
           <div className="relative aspect-[4/3] overflow-hidden">
             <img
@@ -99,7 +99,7 @@ export const ProductCard = ({ product, index = 0 }: ProductCardProps) => {
           </div>
 
           {/* Product Info */}
-          <div className="p-4 md:p-4 lg:p-5 flex flex-col flex-1">
+          <div className="p-4 md:p-4 lg:p-5 flex flex-col">
             {/* Category */}
             <p className="text-[10px] md:text-xs text-text-light uppercase tracking-wider mb-2 font-medium">
               {product.category === 'fete' ? 'Fete' : product.category === 'baieti' ? 'Băieți' : 'Bebeluși'}

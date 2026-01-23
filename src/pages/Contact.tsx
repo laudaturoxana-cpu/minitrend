@@ -89,7 +89,7 @@ export const Contact = () => {
       </section>
 
       {/* Contact Form & Map */}
-      <section className="py-20 lg:py-28">
+      <section className="py-16 md:py-20 lg:py-24">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-20 lg:gap-24">
             {/* Form */}
@@ -197,7 +197,7 @@ export const Contact = () => {
       </section>
 
       {/* FAQ Preview */}
-      <section className="py-20 lg:py-28 bg-white">
+      <section className="py-16 md:py-20 lg:py-24 bg-white">
         <div className="container text-center">
           <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold mb-6">
             Ai întrebări frecvente?

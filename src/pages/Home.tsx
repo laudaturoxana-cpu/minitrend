@@ -171,7 +171,7 @@ export const Home = () => {
       </section>
 
       {/* Features Strip */}
-      <section className="py-20 md:py-28 lg:py-32 bg-gradient-to-b from-white to-cream">
+      <section className="py-16 md:py-20 lg:py-24 bg-gradient-to-b from-white to-cream">
         <div className="container px-5 md:px-6">
           <div className="text-center mb-16 md:mb-20">
             <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-text-primary">
@@ -204,7 +204,7 @@ export const Home = () => {
       </section>
 
       {/* Categories */}
-      <section className="py-20 md:py-28 lg:py-36">
+      <section className="py-16 md:py-20 lg:py-24">
         <div className="container px-5 md:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -265,7 +265,7 @@ export const Home = () => {
       </section>
 
       {/* New Products */}
-      <section className="py-20 md:py-28 lg:py-36 bg-white">
+      <section className="py-16 md:py-20 lg:py-24 bg-white">
         <div className="container px-5 md:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -290,7 +290,7 @@ export const Home = () => {
             </Link>
           </motion.div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-12">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-12 items-start">
             {newProducts.map((product, index) => (
               <ProductCard key={product.id} product={product} index={index} />
             ))}
@@ -299,7 +299,7 @@ export const Home = () => {
       </section>
 
       {/* Promo Banner */}
-      <section className="py-16 md:py-24 lg:py-32">
+      <section className="py-16 md:py-20 lg:py-24">
         <div className="container px-5 md:px-6">
           <motion.div
             initial={{ opacity: 0, scale: 0.98 }}
@@ -338,7 +338,7 @@ export const Home = () => {
       </section>
 
       {/* Popular Products */}
-      <section className="py-20 md:py-28 lg:py-36 bg-gradient-to-b from-cream to-white">
+      <section className="py-16 md:py-20 lg:py-24 bg-gradient-to-b from-cream to-white">
         <div className="container px-5 md:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -358,7 +358,7 @@ export const Home = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-12">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-12 items-start">
             {popularProducts.map((product, index) => (
               <ProductCard key={product.id} product={product} index={index} />
             ))}
@@ -380,7 +380,7 @@ export const Home = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 md:py-28 lg:py-36">
+      <section className="py-16 md:py-20 lg:py-24">
         <div className="container px-5 md:px-6">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <motion.div
@@ -439,7 +439,7 @@ export const Home = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 md:py-28 lg:py-36 bg-white">
+      <section className="py-16 md:py-20 lg:py-24 bg-white">
         <div className="container px-5 md:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

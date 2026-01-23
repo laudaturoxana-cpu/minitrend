@@ -327,7 +327,7 @@ export const Product = () => {
 
       {/* Related Products */}
       {relatedProducts.length > 0 && (
-        <section className="py-20 md:py-28 bg-white">
+        <section className="py-16 md:py-20 lg:py-24 bg-white">
           <div className="container mx-auto px-4">
             <h2 className="font-heading text-2xl md:text-3xl font-bold text-text-primary mb-10 md:mb-12">
               Produse Similare
