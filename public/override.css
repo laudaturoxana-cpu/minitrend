@@ -1,0 +1,67 @@
+/* OVERRIDE FORȚAT - PRIORITATE MAXIMĂ */
+
+/* Newsletter Title */
+footer h3 {
+  font-size: 2.5rem !important;
+}
+
+@media (min-width: 768px) {
+  footer h3 {
+    font-size: 3rem !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  footer h3 {
+    font-size: 3.75rem !important;
+  }
+}
+
+/* Newsletter Subtitle */
+footer div.max-w-2xl > p {
+  font-size: 1.125rem !important;
+}
+
+@media (min-width: 768px) {
+  footer div.max-w-2xl > p {
+    font-size: 1.25rem !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  footer div.max-w-2xl > p {
+    font-size: 1.5rem !important;
+  }
+}
+
+/* Testimonials Title */
+section h2:contains("Părinți"),
+section h2:contains("Spun") {
+  font-size: 2.25rem !important;
+}
+
+@media (min-width: 768px) {
+  section h2 {
+    font-size: 3rem !important;
+  }
+}
+
+/* All Section Labels */
+section > div > p:first-child {
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+}
+
+/* Reduce all section padding */
+section {
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
+}
+
+@media (min-width: 768px) {
+  section {
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
+  }
+}
