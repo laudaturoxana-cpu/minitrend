@@ -6,16 +6,16 @@ export const Footer = () => {
   return (
     <footer className="bg-white mt-auto overflow-x-hidden">
       {/* Newsletter Section */}
-      <div className="bg-gradient-to-r from-primary via-primary-dark to-primary py-12 md:py-16 lg:py-20 mb-8 md:mb-12 lg:mb-16 text-white">
+      <div className="bg-gradient-to-r from-primary via-primary-dark to-primary py-16 md:py-20 lg:py-24 mb-12 md:mb-16 lg:mb-20 text-white">
         <div className="container px-5 md:px-6">
           <div className="max-w-2xl mx-auto text-center text-white">
             <span className="inline-block px-4 py-2 bg-white/20 rounded-full text-xs md:text-sm font-semibold mb-5">
               Newsletter
             </span>
-            <h3 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6">
+            <h3 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-5 md:mb-8">
               Fii la curent cu noutățile!
             </h3>
-            <p className="text-white/90 mb-6 md:mb-8 text-sm md:text-base lg:text-lg max-w-md mx-auto">
+            <p className="text-white/90 mb-8 md:mb-10 text-lg md:text-xl lg:text-2xl max-w-lg mx-auto">
               Abonează-te și primești 10% reducere la prima comandă
             </p>
             <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
