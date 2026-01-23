@@ -48,7 +48,7 @@ export const Contact = () => {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="relative h-[350px] lg:h-[400px] bg-gradient-to-r from-primary to-primary-dark flex items-center">
+      <section className="relative h-[350px] lg:h-[400px] py-20 md:py-24 lg:py-28 bg-gradient-to-r from-primary to-primary-dark flex items-center">
         <div className="container text-center text-white">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="section-head">
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold">
