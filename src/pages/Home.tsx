@@ -35,7 +35,7 @@ export const Home = () => {
   return (
     <div className="w-full overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative min-h-[600px] lg:min-h-[calc(100vh-80px)] flex items-center py-20 md:py-24 lg:py-28">
+      <section className="relative min-h-[600px] lg:min-h-[calc(100vh-80px)] flex items-center py-12 md:py-16 lg:py-20">
         {/* Background */}
         <div className="absolute inset-0 gradient-hero" />
 
@@ -171,7 +171,7 @@ export const Home = () => {
       </section>
 
       {/* Features Strip */}
-      <section className="py-16 md:py-20 lg:py-24 bg-gradient-to-b from-white to-cream">
+      <section className="py-10 md:py-14 lg:py-16 bg-gradient-to-b from-white to-cream">
         <div className="container px-5 md:px-6">
           <div className="text-center mb-16 md:mb-20 section-head">
             <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-text-primary">
@@ -204,7 +204,7 @@ export const Home = () => {
       </section>
 
       {/* Categories */}
-      <section className="py-16 md:py-20 lg:py-24">
+      <section className="py-10 md:py-14 lg:py-16">
         <div className="container px-5 md:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -265,7 +265,7 @@ export const Home = () => {
       </section>
 
       {/* New Products */}
-      <section className="py-16 md:py-20 lg:py-24 bg-white">
+      <section className="py-10 md:py-14 lg:py-16 bg-white">
         <div className="container px-5 md:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -299,7 +299,7 @@ export const Home = () => {
       </section>
 
       {/* Promo Banner */}
-      <section className="py-16 md:py-20 lg:py-24">
+      <section className="py-10 md:py-14 lg:py-16">
         <div className="container px-5 md:px-6">
           <motion.div
             initial={{ opacity: 0, scale: 0.98 }}
@@ -338,7 +338,7 @@ export const Home = () => {
       </section>
 
       {/* Popular Products */}
-      <section className="py-16 md:py-20 lg:py-24 bg-gradient-to-b from-cream to-white">
+      <section className="py-10 md:py-14 lg:py-16 bg-gradient-to-b from-cream to-white">
         <div className="container px-5 md:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -380,7 +380,7 @@ export const Home = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-16 md:py-20 lg:py-24">
+      <section className="py-10 md:py-14 lg:py-16">
         <div className="container px-5 md:px-6">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <motion.div
@@ -439,7 +439,7 @@ export const Home = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-16 md:py-20 lg:py-24 bg-white">
+      <section className="py-10 md:py-14 lg:py-16 bg-white">
         <div className="container px-5 md:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
