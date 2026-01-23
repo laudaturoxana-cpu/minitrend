@@ -451,10 +451,10 @@ export const Home = () => {
               <Heart size={14} />
               Testimoniale
             </span>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-text-primary mb-4">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary mb-5">
               Ce Spun Părinții
             </h2>
-            <p className="text-text-secondary text-sm md:text-base lg:text-lg max-w-xl mx-auto">
+            <p className="text-text-secondary text-lg md:text-xl lg:text-2xl max-w-2xl mx-auto">
               Peste 10,000 de familii fericite ne-au acordat încrederea lor
             </p>
           </motion.div>
@@ -494,23 +494,23 @@ export const Home = () => {
                 transition={{ delay: index * 0.1 }}
                 className="bg-gradient-to-br from-cream to-white rounded-2xl shadow-card p-6 md:p-8"
               >
-                <div className="flex items-center gap-1 mb-5">
+                <div className="flex items-center gap-1.5 mb-6">
                   {[...Array(review.rating)].map((_, i) => (
-                    <Star key={i} size={18} className="text-warning fill-warning" />
+                    <Star key={i} size={22} className="text-warning fill-warning" />
                   ))}
                 </div>
-                <p className="text-text-secondary text-sm md:text-base italic mb-8 leading-relaxed">
+                <p className="text-text-secondary text-base md:text-lg lg:text-xl italic mb-8 leading-relaxed">
                   "{review.text}"
                 </p>
                 <div className="flex items-center gap-4">
                   <div
-                    className={`w-12 h-12 rounded-full bg-gradient-to-br ${review.color} flex items-center justify-center text-white font-bold text-lg`}
+                    className={`w-14 h-14 rounded-full bg-gradient-to-br ${review.color} flex items-center justify-center text-white font-bold text-xl`}
                   >
                     {review.avatar}
                   </div>
                   <div>
-                    <span className="font-bold text-text-primary text-sm md:text-base block">{review.name}</span>
-                    <span className="text-text-light text-xs md:text-sm">{review.location}</span>
+                    <span className="font-bold text-text-primary text-base md:text-lg block">{review.name}</span>
+                    <span className="text-text-light text-sm md:text-base">{review.location}</span>
                   </div>
                 </div>
               </motion.div>
