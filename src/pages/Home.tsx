@@ -58,7 +58,7 @@ export const Home = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full text-primary font-semibold text-xs md:text-sm"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/80 backdrop-blur-sm rounded-full text-primary font-semibold text-sm md:text-base lg:text-lg"
               >
                 <Sparkles size={16} />
                 <span>Colecția Primăvară 2026</span>
@@ -212,7 +212,7 @@ export const Home = () => {
             viewport={{ once: true }}
             className="text-center mb-16 md:mb-20 lg:mb-24 section-head"
           >
-            <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary font-semibold text-xs uppercase tracking-wider mb-5">
+            <span className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary/10 rounded-full text-primary font-semibold text-sm md:text-base uppercase tracking-wider mb-5">
               <Sparkles size={14} />
               Categorii
             </span>
@@ -274,7 +274,7 @@ export const Home = () => {
             className="flex flex-col sm:flex-row sm:items-end justify-between gap-8 mb-16 md:mb-20"
           >
             <div className="section-head">
-              <span className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/10 rounded-full text-secondary font-semibold text-xs uppercase tracking-wider mb-5">
+              <span className="inline-flex items-center gap-2 px-5 py-2.5 bg-secondary/10 rounded-full text-secondary font-semibold text-sm md:text-base uppercase tracking-wider mb-5">
                 <Sparkles size={14} />
                 Proaspăt sosite
               </span>
@@ -346,7 +346,7 @@ export const Home = () => {
             viewport={{ once: true }}
             className="text-center mb-16 md:mb-20 section-head"
           >
-            <span className="inline-flex items-center gap-2 px-4 py-2 bg-warning/10 rounded-full text-warning font-semibold text-xs uppercase tracking-wider mb-5">
+            <span className="inline-flex items-center gap-2 px-5 py-2.5 bg-warning/10 rounded-full text-warning font-semibold text-sm md:text-base uppercase tracking-wider mb-5">
               <Star size={14} className="fill-warning" />
               Cele mai populare
             </span>
@@ -447,7 +447,7 @@ export const Home = () => {
             viewport={{ once: true }}
             className="text-center mb-16 md:mb-20 section-head"
           >
-            <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary font-semibold text-xs uppercase tracking-wider mb-5">
+            <span className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary/10 rounded-full text-primary font-semibold text-sm md:text-base uppercase tracking-wider mb-5">
               <Heart size={14} />
               Testimoniale
             </span>
