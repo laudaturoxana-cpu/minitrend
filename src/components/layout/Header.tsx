@@ -219,9 +219,6 @@ export const Header = () => {
         links={navLinks}
         currentPath={location.pathname}
       />
-
-      {/* Spacer */}
-      <div className="h-20 md:h-24" />
     </>
   );
 };
@@ -281,7 +278,7 @@ interface MobileMenuProps {
 const MobileMenu = ({ isOpen, onClose, links, currentPath }: MobileMenuProps) => (
   <AnimatePresence>
     {isOpen && (
-      <div className="fixed inset-0 z-40 lg:hidden">
+      <div className="fixed inset-0 z-[60] lg:hidden">
         {/* Backdrop */}
         <motion.div
           initial={{ opacity: 0 }}
