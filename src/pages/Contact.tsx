@@ -1,213 +1,184 @@
 import { useState } from 'react';
+import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Clock, Send, MessageCircle } from 'lucide-react';
-import { Button } from '../components/ui/Button';
+import { Container, SectionHeader } from '../components/common';
+import { Breadcrumb, Button, Input } from '../components/ui';
+import { cn } from '../utils';
+import { fadeInUp, staggerContainer, staggerItem } from '../config/motion';
+
+const contactInfo = [
+  {
+    icon: <MapPin size={24} />,
+    title: 'Adresă',
+    content: ['Str. Exemplu nr. 123', 'București, România'],
+  },
+  {
+    icon: <Phone size={24} />,
+    title: 'Telefon',
+    content: ['+40 721 234 567', '+40 31 234 5678'],
+  },
+  {
+    icon: <Mail size={24} />,
+    title: 'Email',
+    content: ['contact@minitrend.ro', 'suport@minitrend.ro'],
+  },
+  {
+    icon: <Clock size={24} />,
+    title: 'Program',
+    content: ['Luni - Vineri: 9:00 - 18:00', 'Sâmbătă: 10:00 - 14:00'],
+  },
+];
 
 export const Contact = () => {
-  const [formData, setFormData] = useState({
+  const [formState, setFormState] = useState({
     name: '',
     email: '',
     subject: '',
     message: '',
   });
-  const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate form submission
-    setSubmitted(true);
-    setTimeout(() => {
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      setSubmitted(false);
-    }, 3000);
+    setIsSubmitting(true);
+
+    // Simulate API call
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
+    setIsSubmitting(false);
+    setIsSubmitted(true);
+    setFormState({ name: '', email: '', subject: '', message: '' });
   };
 
-  const contactInfo = [
-    {
-      icon: <Phone size={28} />,
-      title: 'Telefon',
-      details: ['+40 721 234 567', 'Luni - Vineri: 9:00 - 18:00'],
-    },
-    {
-      icon: <Mail size={28} />,
-      title: 'Email',
-      details: ['contact@minitrend.ro', 'Răspundem în 24h'],
-    },
-    {
-      icon: <MapPin size={28} />,
-      title: 'Adresă',
-      details: ['Str. Exemplu nr. 123', 'București, România'],
-    },
-    {
-      icon: <Clock size={28} />,
-      title: 'Program',
-      details: ['Luni - Vineri: 9:00 - 18:00', 'Weekend: 10:00 - 14:00'],
-    },
+  const breadcrumbItems = [
+    { label: 'Acasă', href: '/' },
+    { label: 'Contact' },
   ];
 
   return (
-    <div className="min-h-screen">
-      {/* Hero */}
-      <section className="relative h-[350px] lg:h-[400px] py-20 md:py-24 lg:py-28 bg-gradient-to-r from-primary to-primary-dark flex items-center">
-        <div className="container text-center text-white">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="section-head">
-            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold">
-              Contactează-ne
-            </h1>
-            <p className="text-white/90 max-w-2xl mx-auto text-lg lg:text-xl leading-relaxed">
-              Suntem aici să te ajutăm! Scrie-ne și îți vom răspunde în cel mai scurt timp.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+    <Container className="py-8 md:py-12">
+      <Breadcrumb items={breadcrumbItems} className="mb-8" />
 
-      {/* Contact Info Cards */}
-      <section className="py-16 -mt-20 relative z-10">
-        <div className="container">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-            {contactInfo.map((info, index) => (
-              <motion.div
-                key={info.title}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-2xl shadow-card p-8 text-center"
+      <SectionHeader
+        title="Contactează-ne"
+        subtitle="Suntem aici să te ajutăm cu orice întrebare"
+      />
+
+      <div className="grid lg:grid-cols-2 gap-12 items-start">
+        {/* Contact Form */}
+        <motion.div
+          variants={fadeInUp}
+          initial="hidden"
+          animate="visible"
+          className="bg-white rounded-2xl p-6 md:p-8 shadow-soft"
+        >
+          {isSubmitted ? (
+            <div className="text-center py-8">
+              <div className="w-16 h-16 bg-success/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Send size={32} className="text-success" />
+              </div>
+              <h3 className="font-heading text-xl font-bold text-text-primary mb-2">
+                Mesaj trimis cu succes!
+              </h3>
+              <p className="text-text-secondary mb-6">
+                Îți vom răspunde în cel mai scurt timp posibil.
+              </p>
+              <Button onClick={() => setIsSubmitted(false)}>
+                Trimite alt mesaj
+              </Button>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="space-y-5">
+              <div className="grid sm:grid-cols-2 gap-5">
+                <Input
+                  label="Nume complet"
+                  placeholder="Ion Popescu"
+                  value={formState.name}
+                  onChange={(e) => setFormState({ ...formState, name: e.target.value })}
+                  required
+                />
+                <Input
+                  label="Email"
+                  type="email"
+                  placeholder="ion@email.com"
+                  value={formState.email}
+                  onChange={(e) => setFormState({ ...formState, email: e.target.value })}
+                  required
+                />
+              </div>
+
+              <Input
+                label="Subiect"
+                placeholder="Cum te putem ajuta?"
+                value={formState.subject}
+                onChange={(e) => setFormState({ ...formState, subject: e.target.value })}
+                required
+              />
+
+              <div>
+                <label className="block text-sm font-medium text-text-primary mb-2">
+                  Mesaj
+                </label>
+                <textarea
+                  placeholder="Scrie mesajul tău aici..."
+                  rows={5}
+                  value={formState.message}
+                  onChange={(e) => setFormState({ ...formState, message: e.target.value })}
+                  required
+                  className={cn(
+                    'w-full px-4 py-3 rounded-xl border border-gray-200 bg-white',
+                    'placeholder:text-text-light resize-none',
+                    'focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary'
+                  )}
+                />
+              </div>
+
+              <Button
+                type="submit"
+                fullWidth
+                loading={isSubmitting}
+                icon={<Send size={18} />}
               >
-                <div className="w-16 h-16 mx-auto mb-6 bg-primary/10 rounded-2xl flex items-center justify-center text-primary">
-                  {info.icon}
-                </div>
-                <h3 className="font-heading font-bold text-lg mb-4">{info.title}</h3>
-                {info.details.map((detail, i) => (
-                  <p key={i} className="text-text-secondary text-base leading-relaxed">
-                    {detail}
+                Trimite mesajul
+              </Button>
+            </form>
+          )}
+        </motion.div>
+
+        {/* Contact Info */}
+        <motion.div
+          variants={staggerContainer}
+          initial="hidden"
+          animate="visible"
+          className="space-y-6"
+        >
+          {contactInfo.map((info) => (
+            <motion.div
+              key={info.title}
+              variants={staggerItem}
+              className="flex gap-4"
+            >
+              <div className="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                {info.icon}
+              </div>
+              <div>
+                <h3 className="font-medium text-text-primary mb-1">{info.title}</h3>
+                {info.content.map((line, i) => (
+                  <p key={i} className="text-text-secondary text-sm">
+                    {line}
                   </p>
                 ))}
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Form & Map */}
-      <section className="py-16 md:py-20 lg:py-24">
-        <div className="container">
-          <div className="grid lg:grid-cols-2 gap-20 lg:gap-24">
-            {/* Form */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-            >
-              <div className="flex items-center gap-4 mb-10">
-                <MessageCircle size={32} className="text-primary" />
-                <h2 className="font-heading text-2xl lg:text-3xl font-bold">Trimite un mesaj</h2>
-              </div>
-
-              {submitted ? (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  className="bg-success/10 text-success p-12 rounded-3xl text-center"
-                >
-                  <div className="w-20 h-20 mx-auto mb-6 bg-success/20 rounded-full flex items-center justify-center">
-                    <Send size={36} />
-                  </div>
-                  <h3 className="font-heading text-2xl font-semibold mb-4">Mesaj trimis!</h3>
-                  <p className="text-lg">Îți mulțumim! Te vom contacta în curând.</p>
-                </motion.div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-8">
-                  <div className="grid md:grid-cols-2 gap-10">
-                    <div>
-                      <label className="block text-base font-medium mb-3">Numele tău</label>
-                      <input
-                        type="text"
-                        required
-                        value={formData.name}
-                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full px-5 py-4 bg-white rounded-xl border-2 border-gray-100 focus:border-primary outline-none transition-colors text-base"
-                        placeholder="Ion Popescu"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-base font-medium mb-3">Email</label>
-                      <input
-                        type="email"
-                        required
-                        value={formData.email}
-                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full px-5 py-4 bg-white rounded-xl border-2 border-gray-100 focus:border-primary outline-none transition-colors text-base"
-                        placeholder="email@exemplu.ro"
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-base font-medium mb-3">Subiect</label>
-                    <input
-                      type="text"
-                      required
-                      value={formData.subject}
-                      onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                      className="w-full px-5 py-4 bg-white rounded-xl border-2 border-gray-100 focus:border-primary outline-none transition-colors text-base"
-                      placeholder="Despre ce este vorba?"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-base font-medium mb-3">Mesaj</label>
-                    <textarea
-                      required
-                      rows={6}
-                      value={formData.message}
-                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full px-5 py-4 bg-white rounded-xl border-2 border-gray-100 focus:border-primary outline-none transition-colors resize-none text-base"
-                      placeholder="Scrie mesajul tău aici..."
-                    />
-                  </div>
-
-                  <Button type="submit" size="lg" icon={<Send size={20} />} iconPosition="right">
-                    Trimite Mesajul
-                  </Button>
-                </form>
-              )}
-            </motion.div>
-
-            {/* Map Placeholder */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="rounded-3xl overflow-hidden shadow-card h-[500px] lg:h-auto"
-            >
-              <div className="w-full h-full bg-gray-100 flex items-center justify-center">
-                <div className="text-center p-12">
-                  <MapPin size={56} className="mx-auto mb-6 text-primary" />
-                  <h3 className="font-heading text-2xl font-semibold mb-4">Locația Noastră</h3>
-                  <p className="text-text-secondary text-lg leading-relaxed">
-                    Str. Exemplu nr. 123<br />
-                    București, Sector 1<br />
-                    România
-                  </p>
-                </div>
               </div>
             </motion.div>
-          </div>
-        </div>
-      </section>
+          ))}
 
-      {/* FAQ Preview */}
-      <section className="py-16 md:py-20 lg:py-24 bg-white">
-        <div className="container text-center section-head">
-          <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold">
-            Ai întrebări frecvente?
-          </h2>
-          <p className="text-text-secondary max-w-2xl mx-auto text-lg leading-relaxed">
-            Verifică pagina noastră de întrebări frecvente pentru răspunsuri rapide la cele mai comune întrebări.
-          </p>
-          <Button variant="outline" size="lg">Vezi FAQ</Button>
-        </div>
-      </section>
-    </div>
+          {/* Map placeholder */}
+          <div className="mt-8 rounded-2xl overflow-hidden h-64 bg-gray-100 flex items-center justify-center">
+            <p className="text-text-secondary">Hartă interactivă</p>
+          </div>
+        </motion.div>
+      </div>
+    </Container>
   );
 };
